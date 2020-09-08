@@ -1,0 +1,56 @@
+<!--pages/myselfInfo.wxml-->
+<view class="content">
+<view class="login-body">
+	<view class="touxiang-body">
+		<image class="touxiang" src="/images/head@3x.png"></image>
+	</view>
+
+	<view class="click-login">
+		<view class="text-login">Login</view>
+		<view class="click-login-text">Click to sign up/login</view>
+	</view>
+	<view class="right-img-body">
+		<image class="right-img" src="/images/right.png"></image>
+	</view>
+</view>
+
+<view class="background-blue-body">
+	<view class="background-blue"></view>
+</view>
+
+<view class="setting-body">
+	<image class="setting-img" src="/images/seting@3x.png"></image>
+	<view class="setting-text">Settings</view>
+</view>
+
+<view class="background-gray-body">
+	<view class="background-gray"></view>
+</view>
+
+<view class="setting-body">
+	<image class="setting-img" src="/images/more@3x.png"></image>
+	<view class="setting-text">More</view>
+</view>
+
+<view class="background-gray-body">
+	<view class="background-Lightgrey"></view>
+</view>
+
+<view class="background-gray-down">
+	<view class="background-gray"></view>
+</view>
+
+	<view class="icon-body">
+		<view></view>
+		<view class="icon-home" bindtap="goHomePage">
+			<image class="img-home" src="/images/homehui@3x.png"></image>
+			<view class="world-home">Home</view>
+		</view>
+		<view class="icon-my" >
+			<image class="img-my" src="/images/myblue@3x.png"></image>
+			<view class="world-my">My</view>
+		</view>
+		<view></view>
+	</view>
+
+</view>

@@ -1,0 +1,17 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/myselfInfo/myselfInfo"
+    
+    
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#337FBF",
+    "navigationBarTitleText": "Philips Home",
+    "navigationBarTextStyle": "white"
+  },
+
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

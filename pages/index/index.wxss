@@ -1,0 +1,152 @@
+/**index.wxss**/
+
+.top-world{
+  margin-top: 16px;
+  margin-left: 23px;
+}
+
+
+.world{
+  width: 512px;
+  height: 56px;
+  font-family: PingFangSC;
+  font-size: 18px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #5b5b5b;
+}
+
+.content-body{
+  width: 328px;
+  height: 300px;
+  border-radius: 2px;
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.2);
+  background-color: #ffffff;
+  margin-bottom: 16px;
+}
+
+.picture{
+  width: 328px;
+  height: 141px;
+  border-radius: 2px;
+}
+
+.title-main-css{
+  margin-top: 13px;
+  margin-left: 16px;
+}
+
+.title-vice-css{
+  margin-top: 5px;
+  margin-left: 16px;
+}
+
+.title-content-css{
+  margin-top: 12px;
+  margin-left: 16px;
+  margin-bottom: 22px;
+}
+
+.title-main{
+  width: 296px;
+  height: 28px;
+  font-family: PingFangSC;
+  font-size: 18px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.56;
+  letter-spacing: normal;
+  color: #212121;
+}
+
+.title-vice{
+  width: 296px;
+  height: 20px;
+  font-family: PingFangSC;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: rgba(33, 33, 33, 0.5);
+}
+
+.title-content{
+  width: 296px;
+  height: 66px;
+  font-family: PingFangSC;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.57;
+  letter-spacing: normal;
+  color: rgba(33, 33, 33, 0.8);
+}
+
+.second-iamge{
+  margin-top: 16px;
+  margin-left: 23px;
+  width: 328px;
+  height: 141px;
+}
+
+.icon-body{
+  display: flex;
+  justify-content: space-between;
+  width: 374px;
+  height: 50px;
+  background-color: #ffffff;
+  margin-top: 10px;
+}
+
+.icon-home{
+  display: flex;
+  flex-direction: column;
+}
+
+.icon-my{
+  display: flex;
+  flex-direction: column;
+}
+
+.img-home{
+  width: 27px;
+  height: 36px;
+  color: #5a9ada;
+}
+
+.img-my{
+  width: 27px;
+  height: 36px;
+  color: #c4c4c4;
+}
+
+.world-home{
+  font-family: dls-icons-24;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #5a9ada;
+}
+
+
+
+.world-my{
+  font-family: dls-icons-24;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #c4c4c4;
+}
