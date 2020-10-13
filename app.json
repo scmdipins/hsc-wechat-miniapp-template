@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/root/root",
     "pages/index/index",
     "pages/myselfInfo/myselfInfo"
     

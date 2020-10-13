@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "user": "/pages/myselfInfo/myselfInfo",
+    "index": "/pages/index/index"
+  }
+}
