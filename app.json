@@ -1,18 +1,36 @@
 {
   "pages": [
-    "pages/root/root",
-    "pages/index/index",
-    "pages/myselfInfo/myselfInfo"
-    
-    
+    "pages/home/home",
+    "pages/myselfInfo/myselfInfo",
+    "pages/root/root"
   ],
+  "tabBar": {
+    "custom": true,
+    "color": "#c4c4c4",
+    "selectedColor": "#5a9ada",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "text": "Home",
+        "pagePath": "pages/home/home",
+        "iconPath": "images/homehui.png",
+        "selectedIconPath": "images/home.png"
+      },
+      {
+        "text": "My",
+        "pagePath": "pages/myselfInfo/myselfInfo",
+        "iconPath": "images/my.png",
+        "selectedIconPath": "images/myblue.png"
+      }
+    ]
+  },
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#337FBF",
     "navigationBarTitleText": "Philips Home",
     "navigationBarTextStyle": "white"
   },
-
   "style": "v2",
   "sitemapLocation": "sitemap.json"
 }

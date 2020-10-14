@@ -26,18 +26,4 @@
 
 	</view>
 
-	<view class="icon-body">
-		<view></view>
-		<view class="icon-home">
-			<image class="img-home" src="/images/home@3x.png"></image>
-			<view class="world-home">Home</view>
-		</view>
-		<view class="icon-my" bindtap="goMyselfPage">
-			<image class="img-my" src="/images/my@3x.png"></image>
-			<view class="world-my">My</view>
-		</view>
-		<view></view>
-	</view>
-
-
 </view>

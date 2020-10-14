@@ -93,7 +93,10 @@ Page({
 
   itemTaped: function (event) {
     var item = event.currentTarget.dataset.item;
+    const index = event.currentTarget.dataset.index;
+    // this.tabBar.list[index].show = true;
     this.selectItem(item);
+    console.log(event.index);
   },
 
   selectItem: function(object) {

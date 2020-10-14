@@ -1,12 +1,12 @@
 <!-- pages/root/root.wxml -->
 <view class="root">
     <view class="container">
-        <index wx:if="{{ selectedItem.pagePath == '/pages/index/index' }}"></index>
-        <user wx:if="{{ selectedItem.pagePath == '/pages/myselfInfo/myselfInfo' }}"></user> 
+        <index wx:if="{{ selectedItem.show }}"></index>
+        <user wx:if="{{ selectedItem.show }}"></user> 
     </view>
     <view class="tabBar">
         <block wx:for="{{ tabBar.list }}" wx:for-item="item" wx:key="index">
-            <view class="tabBar_item" bindtap="itemTaped" data-item="{{ item }}">
+            <view class="tabBar_item" bindtap="itemTaped" data-item="{{ item }}" data-index="{{ index }}">
                 <image class="tabBar_icon" src="{{ item.pagePath === selectedItem.pagePath ? item.selectedIconPath : item.iconPath }}"></image>
                 <text class="tabBar_title {{item.pagePath == selectedItem.pagePath ? 'tabBar_title_selected' : ''}}">{{item.title}}</text>
             </view>

@@ -1,16 +1,14 @@
 /**index.wxss**/
 
 .top-world{
-  margin-top: 16px;
-  margin-left: 23px;
+  margin-top: 32rpx;
+  margin-left: 46rpx;
 }
-
-
 .world{
-  width: 512px;
-  height: 56px;
+  width: 1024rpx;
+  height: 112rpx;
   font-family: PingFangSC;
-  font-size: 18px;
+  font-size: 36rpx;
   font-weight: 600;
   font-stretch: normal;
   font-style: normal;
@@ -20,41 +18,41 @@
 }
 
 .content-body{
-  width: 328px;
-  height: 300px;
-  border-radius: 2px;
-  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.2);
+  width: 656rpx;
+  height: 600rpx;
+  border-radius: 4rpx;
+  box-shadow: 0 4rpx 20rpx 0 rgba(0, 0, 0, 0.2);
   background-color: #ffffff;
-  margin-bottom: 16px;
+  margin-bottom: 32rpx;
 }
 
 .picture{
-  width: 328px;
-  height: 141px;
-  border-radius: 2px;
+  width: 656rpx;
+  height: 281rpx;
+  border-radius: 4rpx;
 }
 
 .title-main-css{
-  margin-top: 13px;
-  margin-left: 16px;
+  margin-top: 26rpx;
+  margin-left: 32rpx;
 }
 
 .title-vice-css{
-  margin-top: 5px;
-  margin-left: 16px;
+  margin-top: 10rpx;
+  margin-left: 32rpx;
 }
 
 .title-content-css{
-  margin-top: 12px;
-  margin-left: 16px;
-  margin-bottom: 22px;
+  margin-top: 24rpx;
+  margin-left: 32rpx;
+  margin-bottom: 44rpx;
 }
 
 .title-main{
-  width: 296px;
-  height: 28px;
+  width: 592rpx;
+  height: 56rpx;
   font-family: PingFangSC;
-  font-size: 18px;
+  font-size: 36rpx;
   font-weight: 600;
   font-stretch: normal;
   font-style: normal;
@@ -64,10 +62,10 @@
 }
 
 .title-vice{
-  width: 296px;
-  height: 20px;
+  width: 592rpx;
+  height: 40rpx;
   font-family: PingFangSC;
-  font-size: 14px;
+  font-size: 28rpx;
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
@@ -77,10 +75,10 @@
 }
 
 .title-content{
-  width: 296px;
-  height: 66px;
+  width: 592rpx;
+  height: 132rpx;
   font-family: PingFangSC;
-  font-size: 14px;
+  font-size: 28rpx;
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
@@ -90,19 +88,19 @@
 }
 
 .second-iamge{
-  margin-top: 16px;
-  margin-left: 23px;
-  width: 328px;
-  height: 141px;
+  margin-top: 32rpx;
+  margin-left: 46rpx;
+  width: 656rpx;
+  height: 282rpx;
 }
 
 .icon-body{
   display: flex;
   justify-content: space-between;
-  width: 374px;
-  height: 50px;
+  width: 748rpx;
+  height: 100rpx;
   background-color: #ffffff;
-  margin-top: 10px;
+  margin-top: 20rpx;
 }
 
 .icon-home{
@@ -116,20 +114,20 @@
 }
 
 .img-home{
-  width: 27px;
-  height: 36px;
+  width: 54rpx;
+  height: 72rpx;
   color: #5a9ada;
 }
 
 .img-my{
-  width: 27px;
-  height: 36px;
+  width: 54rpx;
+  height: 72rpx;
   color: #c4c4c4;
 }
 
 .world-home{
   font-family: dls-icons-24;
-  font-size: 16px;
+  font-size: 32rpx;
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
@@ -142,7 +140,7 @@
 
 .world-my{
   font-family: dls-icons-24;
-  font-size: 16px;
+  font-size: 32rpx;
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
