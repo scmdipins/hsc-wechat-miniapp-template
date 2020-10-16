@@ -1,0 +1,3 @@
+<!--pages/mypage.wxml-->
+
+<phMyPage data-params="{{MyPageConsts}}" />

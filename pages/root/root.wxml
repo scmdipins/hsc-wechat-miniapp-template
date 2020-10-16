@@ -3,6 +3,7 @@
     <view class="container">
         <index wx:if="{{ selectedItem.show }}"></index>
         <user wx:if="{{ selectedItem.show }}"></user> 
+        <mypage wx:if="{{ selectedItem.show }}" />
     </view>
     <view class="tabBar">
         <block wx:for="{{ tabBar.list }}" wx:for-item="item" wx:key="index">

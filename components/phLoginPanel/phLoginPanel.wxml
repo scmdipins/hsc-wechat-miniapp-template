@@ -1,0 +1,10 @@
+<!--components/phLoginPanel/phLoginPanel.wxml-->
+
+<view class="phloginpanel-body" bindtap="onTap">
+	<image class="phloginpanel-img1" src="{{imgValue}}" />
+	<view class="phloginpanel-view">
+    <text class="phloginpanel-txt" style="color:{{txtColor}}">{{txtValue}}</text>
+		<view class="phloginpanel-tip" style="color:{{tipColor}}">{{tipValue}}</view>
+	</view>
+	<image class="phloginpanel-img2" src="/images/right.png"/>
+</view>

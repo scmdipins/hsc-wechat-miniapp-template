@@ -1,0 +1,6 @@
+<!--components/phLabelItem/phLabelItem.wxml-->
+<view class="phlabelitem-body">
+	<image class="phlabelitem-img" src="{{imgValue}}"></image>
+  <text class="phlabelitem-txt" bindtap="onTap" style="color:{{txtColor}}">{{txtValue}}</text>  
+</view>
+<phLine data-params='{"heightValue":"1px","colorValue":"#e4e4e4"}' />

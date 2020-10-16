@@ -16,7 +16,21 @@ var tabBar = {
       "pagePath": "/pages/myselfInfo/myselfInfo",
       "iconPath": "/images/my.png",
       "selectedIconPath": "/images/myblue.png"
-    }
+    },
+    {
+      "text": "My2",
+      "naviTitle": "My2",
+      "pagePath": "/pages/mypage/mypage",
+      "iconPath": "/images/my.png",
+      "selectedIconPath": "/images/myblue.png"
+    },
+    {
+      "text": "Account",
+      "naviTitle": "Account",
+      "pagePath": "/pages/account/account",
+      "iconPath": "/images/my.png",
+      "selectedIconPath": "/images/myblue.png"
+    }        
   ]
 }
 module.exports = {

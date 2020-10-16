@@ -2,7 +2,11 @@
   "pages": [
     "pages/home/home",
     "pages/myselfInfo/myselfInfo",
-    "pages/root/root"
+    "pages/root/root",
+    "pages/logs/logs",
+    "pages/my404/my404",
+    "pages/mypage/mypage",
+    "pages/account/account"
   ],
   "tabBar": {
     "custom": true,
@@ -22,7 +26,19 @@
         "pagePath": "pages/myselfInfo/myselfInfo",
         "iconPath": "images/my.png",
         "selectedIconPath": "images/myblue.png"
-      }
+      },
+      {
+        "text": "My2",
+        "pagePath": "pages/mypage/mypage",
+        "iconPath": "images/my.png",
+        "selectedIconPath": "images/myblue.png"
+      },
+      {
+        "text": "Account",
+        "pagePath": "pages/account/account",
+        "iconPath": "images/my.png",
+        "selectedIconPath": "images/myblue.png"
+      }      
     ]
   },
   "window": {
