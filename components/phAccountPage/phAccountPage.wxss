@@ -1,0 +1,28 @@
+/* components/phAccountPage/phAccountPage.wxss */
+
+.phaccountpage-pht {
+  min-width: 20px;
+  max-width: 20px;
+  min-height: 20px;
+  max-height: 20px; 
+  margin-left: 22px;
+  margin-right: 22px;
+}
+
+.phaccountpage-input {
+  /* margin-left: 22px; */
+  margin-right: 22px;
+  /* background-color: red; */
+  width: 200%;
+  text-align: end;
+  color: #e4e4e4;
+}
+
+.phaccountpage-img {
+  min-width: 20px;
+  max-width: 20px;
+  min-height: 20px;
+  max-height: 20px; 
+  margin-left: 22px;
+  margin-right: 22px;
+}

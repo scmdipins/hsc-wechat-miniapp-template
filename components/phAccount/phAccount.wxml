@@ -1,6 +1,0 @@
-<!--components/phAccount/phAccount.wxml-->
-<phLabelItem data-params="{{LoginPanel}}" />
-<phLabelItem data-params="{{LoginPanel}}" />
-<phLine data-params='{"heightValue":"13px","colorValue":"#f2f6ff"}' />
-<phLabelItem data-params="{{LoginPanel}}" />
-

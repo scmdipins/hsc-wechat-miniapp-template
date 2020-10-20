@@ -2,7 +2,7 @@
 Component({
 
   data: {
-    labelItems: [
+    params: [
       {
         "imgValue": null,
         "txtValue": "<phLabelGroup1>",
@@ -18,12 +18,12 @@ Component({
 
   attached: function () { 
     console.log('[phLabelGroup] attached, this.dataset.params = ', this.dataset.params);
-    this.setData({labelItems: this.dataset.params});
+    this.setData({params: this.dataset.params});
   },
 
   methods: {
     onTap : function () {
-      console.log('[phLabelGroup] onTap, this.dataset = ', this.data);
+      console.log('[phLabelGroup] onTap, this.data.params = ', this.data.params);
     }
   }  
 

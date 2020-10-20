@@ -1,6 +1,4 @@
 {
   "component": true,
-  "usingComponents": {
-    "phLine" : "/components/phLine/phLine"
-  }
+  "usingComponents": {}
 }

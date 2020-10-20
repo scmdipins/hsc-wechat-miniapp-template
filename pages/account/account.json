@@ -1,5 +1,5 @@
 {
   "usingComponents": {
-    "phAccount" : "/components/phAccount/phAccount"
+    "phAccountPage" : "/components/phAccountPage/phAccountPage"
   }
 }
