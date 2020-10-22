@@ -4,15 +4,13 @@ var tabBar = {
         {
           "title": "Home",
           "naviTitle": "Home",
-          "show": false,
-          "pagePath": "/pages/index/index",
+          "pagePath": "/pages/home/home",
           "iconPath": "/images/homehui.png",
           "selectedIconPath": "/images/home.png"
         },
         {
           "title": "My",
           "naviTitle": "My",
-          "show": false,
           "pagePath": "/pages/myselfInfo/myselfInfo",
           "iconPath": "/images/my.png",
           "selectedIconPath": "/images/myblue.png"

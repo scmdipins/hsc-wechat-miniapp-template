@@ -1,29 +1,10 @@
-<!--index.wxml-->
-
 <view class="content">
-	<view class="top-world">
-		<view class="world">Dear guest, good morning!</view>
-
-
-		<view class="content-body">
-			<view class="first-image">
-				<image class="picture" src="/images/demo.png"></image>
-			</view>
-			<view class="title-main-css">
-				<view class="title-main">标题</view>
-			</view>
-			<view class="title-vice-css">
-				<view class="title-vice">副标题</view>
-			</view>
-			<view class="title-content-css">
-				<view class="title-content">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</view>
-			</view>
+		<view class="title-line">
+				<view class="title-content">Dear guest, good morning!</view>
 		</view>
-
-		<view class="second-image">
-			<image class="picture" src="/images/demo.png"></image>
+		<view class="item-content">
+				<block wx:for="{{ cards }}" wx:for-item="item" wx:key="index">
+								<card imagePath="{{ item.imagePath }}" mainTitle="{{item.mainTitle}}" subTitle="{{item.subTitle}}" desc="{{ item.desc }}"></card>
+				</block>
 		</view>
-
-	</view>
-
 </view>

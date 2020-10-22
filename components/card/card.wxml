@@ -1,0 +1,14 @@
+  <view class="content-body">
+    <view class="first-image" wx:if="{{ imagePath && imagePath != null && imagePath != ''}}" >
+      <image class="picture" src="{{ imagePath }}"></image>
+    </view>
+    <view class="title-main-css" wx:if="{{ mainTitle && mainTitle != null && mainTitle != ''}}" >
+      <view class="title-main">{{ mainTitle }}</view>
+    </view>
+    <view class="title-vice-css" wx:if="{{ subTitle && subTitle != null && subTitle != ''}}" >
+      <view class="title-vice">{{ subTitle }}</view>
+    </view>
+    <view class="title-content-css">
+      <view class="title-content">{{ desc }}</view>
+    </view>
+  </view>

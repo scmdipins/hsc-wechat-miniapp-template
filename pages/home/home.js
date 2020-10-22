@@ -1,5 +1,6 @@
 //index.js
 //获取应用实例
+const cardData = require("../../datas/home.data.js")
 const app = getApp()
 
 Page({
@@ -7,7 +8,8 @@ Page({
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    cards: null
   },
   //事件处理函数
   bindViewTap: function() {
@@ -16,6 +18,7 @@ Page({
     })
   },
   onLoad: function () {
+    this.setData({cards: cardData.cards});
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,

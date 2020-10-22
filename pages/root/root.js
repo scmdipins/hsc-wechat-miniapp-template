@@ -9,24 +9,6 @@ Page({
 
     selectedItem: null,
     tabBar: null
-    // tabBar: {
-    //   list: [
-    //     {
-    //       "title": "Home",
-    //       "naviTitle": "Home",
-    //       "pagePath": "/pages/index/index",
-    //       "iconPath": "/images/homehui.png",
-    //       "selectedIconPath": "/images/home.png"
-    //     },
-    //     {
-    //       "title": "My",
-    //       "naviTitle": "My",
-    //       "pagePath": "/pages/myselfInfo/myselfInfo",
-    //       "iconPath": "/images/my.png",
-    //       "selectedIconPath": "/images/myblue.png"
-    //     }
-    //   ]
-    // },
   },
 
   /**
@@ -93,8 +75,6 @@ Page({
 
   itemTaped: function (event) {
     var item = event.currentTarget.dataset.item;
-    const index = event.currentTarget.dataset.index;
-    // this.tabBar.list[index].show = true;
     this.selectItem(item);
     console.log(event.index);
   },

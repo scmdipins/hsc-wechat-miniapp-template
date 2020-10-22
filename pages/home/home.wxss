@@ -1,12 +1,9 @@
-/**index.wxss**/
-
-.top-world{
-  margin-top: 32rpx;
-  margin-left: 46rpx;
+.title-line{
+  height: 10vh;
 }
-.world{
-  width: 1024rpx;
-  height: 112rpx;
+
+.title-content {
+  padding: 32rpx 46rpx;
   font-family: PingFangSC;
   font-size: 36rpx;
   font-weight: 600;
@@ -17,134 +14,22 @@
   color: #5b5b5b;
 }
 
-.content-body{
-  width: 656rpx;
-  height: 600rpx;
-  border-radius: 4rpx;
-  box-shadow: 0 4rpx 20rpx 0 rgba(0, 0, 0, 0.2);
-  background-color: #ffffff;
-  margin-bottom: 32rpx;
-}
-
-.picture{
-  width: 656rpx;
-  height: 281rpx;
-  border-radius: 4rpx;
-}
-
-.title-main-css{
-  margin-top: 26rpx;
-  margin-left: 32rpx;
-}
-
-.title-vice-css{
-  margin-top: 10rpx;
-  margin-left: 32rpx;
-}
-
-.title-content-css{
-  margin-top: 24rpx;
-  margin-left: 32rpx;
-  margin-bottom: 44rpx;
-}
-
-.title-main{
-  width: 592rpx;
-  height: 56rpx;
+.item-content {
+  height: 80vh;
   font-family: PingFangSC;
   font-size: 36rpx;
   font-weight: 600;
   font-stretch: normal;
   font-style: normal;
-  line-height: 1.56;
-  letter-spacing: normal;
-  color: #212121;
-}
-
-.title-vice{
-  width: 592rpx;
-  height: 40rpx;
-  font-family: PingFangSC;
-  font-size: 28rpx;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
   line-height: normal;
   letter-spacing: normal;
-  color: rgba(33, 33, 33, 0.5);
+  color: #5b5b5b;
+  overflow-y: auto;
 }
 
-.title-content{
-  width: 592rpx;
-  height: 132rpx;
-  font-family: PingFangSC;
-  font-size: 28rpx;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.57;
-  letter-spacing: normal;
-  color: rgba(33, 33, 33, 0.8);
-}
-
-.second-iamge{
-  margin-top: 32rpx;
-  margin-left: 46rpx;
-  width: 656rpx;
-  height: 282rpx;
-}
-
-.icon-body{
-  display: flex;
-  justify-content: space-between;
-  width: 748rpx;
-  height: 100rpx;
-  background-color: #ffffff;
-  margin-top: 20rpx;
-}
-
-.icon-home{
-  display: flex;
-  flex-direction: column;
-}
-
-.icon-my{
-  display: flex;
-  flex-direction: column;
-}
-
-.img-home{
-  width: 54rpx;
-  height: 72rpx;
-  color: #5a9ada;
-}
-
-.img-my{
-  width: 54rpx;
-  height: 72rpx;
-  color: #c4c4c4;
-}
-
-.world-home{
-  font-family: dls-icons-24;
-  font-size: 32rpx;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  color: #5a9ada;
-}
-
-
-
-.world-my{
-  font-family: dls-icons-24;
-  font-size: 32rpx;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  color: #c4c4c4;
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+  display: none;
 }

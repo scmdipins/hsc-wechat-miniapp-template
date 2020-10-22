@@ -1,9 +1,8 @@
 <!-- pages/root/root.wxml -->
 <view class="root">
     <view class="container">
-        <index wx:if="{{ selectedItem.show }}"></index>
-        <user wx:if="{{ selectedItem.show }}"></user> 
-        <mypage wx:if="{{ selectedItem.show }}" />
+        <index wx:if="{{ selectedItem.pagePath === '/pages/home/home' }}"></index>
+        <user wx:if="{{ selectedItem.pagePath === '/pages/myselfInfo/myselfInfo' }}"></user> 
     </view>
     <view class="tabBar">
         <block wx:for="{{ tabBar.list }}" wx:for-item="item" wx:key="index">
