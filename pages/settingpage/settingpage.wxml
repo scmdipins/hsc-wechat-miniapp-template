@@ -1,0 +1,3 @@
+<!--pages/settingpage/settingpage.wxml-->
+
+<phSettingPage data-params="{{SettingPageConsts}}" />

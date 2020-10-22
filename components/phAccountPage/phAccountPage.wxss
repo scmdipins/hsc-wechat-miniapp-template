@@ -14,7 +14,7 @@
   margin-right: 22px;
   /* background-color: red; */
   width: 200%;
-  text-align: end;
+  text-align: right;
   color: #e4e4e4;
 }
 

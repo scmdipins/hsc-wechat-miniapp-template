@@ -1,4 +1,4 @@
-var MyPageConsts = {
+var SettingPageConsts = {
   LoginPanel : {
     "imgValue": "/images/head@3x.png",
     "txtValue": "Login",
@@ -24,5 +24,5 @@ var MyPageConsts = {
 }
 
 module.exports = {
-  MyPageConsts: MyPageConsts
+  SettingPageConsts: SettingPageConsts
 }

@@ -6,7 +6,8 @@
     "pages/logs/logs",
     "pages/my404/my404",
     "pages/mypage/mypage",
-    "pages/account/account"
+    "pages/account/account",
+    "pages/settingpage/settingpage"
   ],
   "tabBar": {
     "custom": true,
@@ -38,7 +39,7 @@
         "pagePath": "pages/account/account",
         "iconPath": "images/my.png",
         "selectedIconPath": "images/myblue.png"
-      }      
+      }
     ]
   },
   "window": {

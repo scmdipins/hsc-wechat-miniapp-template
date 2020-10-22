@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "phSettingPage" : "/components/phSettingPage/phSettingPage"
+  }
+}
