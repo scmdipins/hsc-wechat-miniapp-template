@@ -3,6 +3,7 @@ var tabBar = {
   selected: 0,
   color: "#c4c4c4",
   selectedColor: "#5a9ada",
+  background: "white",
   list: [{
       "text": "Home",
       "naviTitle": "Home",
