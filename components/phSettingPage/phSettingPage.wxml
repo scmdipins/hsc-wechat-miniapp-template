@@ -1,2 +1,24 @@
 <!--components/phSettingPage/phSettingPage.wxml-->
-<text>components/phSettingPage/phSettingPage.wxml</text>
+
+<phLabelItem data-params="{{params.privacyPolicy}}">
+  <view class="view-h">
+    <text class="phsettingpage-txt">v0.01</text>
+    <text class="phsettingpage-greatthan" decode="{{true}}">&gt;</text>
+  </view>
+</phLabelItem>
+<phLine data-params='{"heightValue":"1px","colorValue":"#e4e4e4"}' />
+
+<phLabelItem data-params="{{params.userAgreement}}">
+  <view class="view-h">
+    <text class="phsettingpage-txt">v0.01</text>
+    <text class="phsettingpage-greatthan" decode="{{true}}">&gt;</text>
+  </view>
+</phLabelItem>
+<phLine data-params='{"heightValue":"1px","colorValue":"#e4e4e4"}' />
+
+<phLabelItem data-params="{{params.version}}">
+  <text class="phsettingpage-txt">v0.01</text>
+</phLabelItem>
+<phLine data-params='{"heightValue":"1px","colorValue":"#e4e4e4"}' />
+
+<phButton class="phsettingpage-btn" data-params="{{params.logoutButton}}" />

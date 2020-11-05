@@ -1,4 +1,5 @@
 <!--components/phMyPage/phMyPage.wxml-->
-<phLoginPanel data-params="{{params.LoginPanel}}" />
+
+<phLoginPanel data-params="{{params.loginPanel}}" />
 <phLine data-params='{"heightValue":"13px","colorValue":"#f2f6ff"}' />
-<phLabelGroup data-params="{{params.LabelGroup}}" />
+<phLabelGroup data-params="{{params.labelGroup}}" />

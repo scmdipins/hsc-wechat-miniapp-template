@@ -1,22 +1,21 @@
 // components/phSettingPage/phSettingPage.js
+
 Component({
-  /**
-   * Component properties
-   */
-  properties: {
 
-  },
-
-  /**
-   * Component initial data
-   */
   data: {
-
+    params : {
+      privacyPolicy:null,
+      userAgreement:null,
+      version:null,
+      logoutButton:null
+    }
   },
 
-  /**
-   * Component methods
-   */
+  attached: function () {
+    console.log('[phSettingPage] attached, this.dataset.params = ', this.dataset.params);
+    this.setData({params : this.dataset.params});
+  },
+
   methods: {
 
   }

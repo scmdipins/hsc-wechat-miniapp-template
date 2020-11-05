@@ -4,8 +4,8 @@ Component({
 
   data: {
     params : {
-      LoginPanel:null,
-      LabelGroup:null
+      loginPanel:null,
+      labelGroup:null
     }
   },
 

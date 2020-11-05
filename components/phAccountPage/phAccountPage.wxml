@@ -1,15 +1,15 @@
 <!--components/phAccountPage/phAccountPage.wxml-->
-<phLabelItem data-params="{{params.ProfilePhoto}}" bindtap="onProfilePhoto">
-  <image class="phaccountpage-pht" src="{{params.ProfilePhoto.photoValue}}" bindtap="onTap" />
+<phLabelItem data-params="{{params.profilePhoto}}" bindtap="onProfilePhoto">
+  <image class="phaccountpage-photo" src="{{params.profilePhoto.photoValue}}" bindtap="onTap" />
 </phLabelItem>
-<phLine data-params='{"heightValue":"1px","colorValue":"#e4e4e4"}' />
-<phLabelItem data-params="{{params.UserName}}">
-  <input class="phaccountpage-input" maxlength="{{params.UserName.maxLength}}" value="{{params.UserName.inputValue}}" bindfocus="onUserNameFocus" bindblur="onUserNameBlur" />
+<phLine data-params='{"heightValue":"1px","colorValue":"#dddddd"}' />
+<phLabelItem data-params="{{params.userName}}">
+  <input class="phaccountpage-input" maxlength="{{params.userName.maxLength}}" value="{{params.userName.inputValue}}" bindfocus="onUserNameFocus" bindblur="onUserNameBlur" />
 </phLabelItem>
 
 <phLine data-params='{"heightValue":"13px","colorValue":"#f2f6ff"}' />
 
-<phLabelItem data-params="{{params.AccountAndSecurity}}">
-  <image class="phaccountpage-img" src="/images/right.png" />
+<phLabelItem data-params="{{params.accountAndSecurity}}">
+  <text class="phaccountpage-greatthan" decode="{{true}}">&gt;</text>
 </phLabelItem>
-<phLine data-params='{"heightValue":"1px","colorValue":"#e4e4e4"}' />
+<phLine data-params='{"heightValue":"1px","colorValue":"#dddddd"}' />

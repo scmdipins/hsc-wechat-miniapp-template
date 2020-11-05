@@ -1,28 +1,35 @@
 /* components/phAccountPage/phAccountPage.wxss */
 
-.phaccountpage-pht {
-  min-width: 20px;
-  max-width: 20px;
-  min-height: 20px;
-  max-height: 20px; 
-  margin-left: 22px;
-  margin-right: 22px;
+.phaccountpage-photo {
+  min-width: 40rpx;
+  max-width: 40rpx;
+  min-height: 40rpx;
+  max-height: 40rpx; 
+  margin-right: 44rpx;
 }
 
 .phaccountpage-input {
-  /* margin-left: 22px; */
-  margin-right: 22px;
-  /* background-color: red; */
-  width: 200%;
+  font-family: PingFangSC;
+  font-size: 28rpx;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #999999;    
   text-align: right;
-  color: #e4e4e4;
+  margin-right: 44rpx;
 }
 
-.phaccountpage-img {
-  min-width: 20px;
-  max-width: 20px;
-  min-height: 20px;
-  max-height: 20px; 
-  margin-left: 22px;
-  margin-right: 22px;
+.phaccountpage-greatthan {
+  width: 36rpx;
+  height: 36rpx;
+  font-family: dls-icons-24;
+  font-size: 36rpx;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #c4c4c4;
 }

@@ -1,4 +1,7 @@
 {
   "component": true,
-  "usingComponents": {}
+  "usingComponents": {
+    "phLabelItem" : "/components/phLabelItem/phLabelItem",    
+    "phButton" : "/components/phButton/phButton"
+  }
 }

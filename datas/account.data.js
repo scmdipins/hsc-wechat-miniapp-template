@@ -1,17 +1,17 @@
 var AccountConsts = {
-  ProfilePhoto : {
+  profilePhoto : {
     "txtValue": "Profile photo",
     "txtColor": "#000000",
     // "urlValue": "/pages/my404/my404",
     "photoValue": "/images/myblue@3x.png"
   },
-  UserName : {
+  userName : {
     "txtValue": "User name",
     "txtColor": "#000000",
     "inputValue": "Luna",
     "maxLength": null
   },
-  AccountAndSecurity : {    
+  accountAndSecurity : {    
     "txtValue": "Account and security",
     "txtColor": "#000000",
     "urlValue": "/pages/my404/my404"

@@ -1,26 +1,27 @@
 var SettingPageConsts = {
-  LoginPanel : {
-    "imgValue": "/images/head@3x.png",
-    "txtValue": "Login",
-    "txtColor": "#000000",
-    "urlValue": "/pages/my404/my404",
-    "tipValue": "Click to sign up/login",
-    "tipColor": "#7c7c7c"
+  privacyPolicy: {
+    "imgValue": null,
+    "txtValue": "Privacy Policy",
+    "txtColor": null,
+    "urlValue": "/pages/privacyPolicyPage/privacyPolicyPage"
   },
-  LabelGroup : [
-    {
-      "imgValue": "/images/seting@3x.png",
-      "txtValue": "Settings",
-      "txtColor": null,
-      "urlValue": "/pages/settingpage/settingpage"
-    },
-    {
-      "imgValue": "/images/more@3x.png",
-      "txtValue": "More",
-      "txtColor": null,
-      "urlValue": "/pages/my404/my404"
-    }
-  ]
+  userAgreement: {
+    "imgValue": null,
+    "txtValue": "User Agreement",
+    "txtColor": null,
+    "urlValue": "/pages/userAgreementPage/userAgreementPage"
+  },
+  version:{
+    "imgValue": null,
+    "txtValue": "Version",
+    "txtColor": null,
+    "urlValue": null
+  } ,
+  logoutButton : {
+    "txtValue": "Log out",
+    "txtColor": "#FFFFFF",
+    "bgColor": "#5a9ada"
+  }  
 }
 
 module.exports = {

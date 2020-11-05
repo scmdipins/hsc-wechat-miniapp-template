@@ -20,7 +20,7 @@ Component({
       jo.heightValue = '1px';
     }
     if (jo.colorValue == null) {
-      jo.colorValue = '#000000';
+      jo.colorValue = '#e4e4e4';
     }
     this.setData({params : jo});
   },

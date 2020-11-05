@@ -1,5 +1,5 @@
 var MyPageConsts = {
-  LoginPanel : {
+  loginPanel : {
     "imgValue": "/images/head@3x.png",
     "txtValue": "Login",
     "txtColor": "#000000",
@@ -7,7 +7,7 @@ var MyPageConsts = {
     "tipValue": "Click to sign up/login",
     "tipColor": "#7c7c7c"
   },
-  LabelGroup : [
+  labelGroup : [
     {
       "imgValue": "/images/seting@3x.png",
       "txtValue": "Settings",

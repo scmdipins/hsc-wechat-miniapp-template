@@ -5,20 +5,20 @@ Component({
 
   data: {
     params : {
-      ProfilePhoto : {
+      profilePhoto : {
         "txtValue": "Profile phote",
         "txtColor": null,
         "urlValue": "/pages/my404/my404",
         "photoValue": "/images/head@3x.png"
       },
-      UserName : {
+      userName : {
         "txtValue": "User name",
         "txtColor": null,
         "urlValue": "/pages/my404/my404",
         "inputValue": "Luna",
         "maxLength": null
       },
-      AccountAndSecurity : {    
+      accountAndSecurity : {    
         "txtValue": "Account and security",
         "txtColor": null,
         "urlValue": "/pages/my404/my404"
@@ -54,7 +54,7 @@ Component({
         success (res) {
           // tempFilePath可以作为img标签的src属性显示图片
           const tempFilePaths = res.tempFilePaths;
-          var photoValue = 'params.ProfilePhoto.photoValue';
+          var photoValue = 'params.profilePhoto.photoValue';
           that.setData({[photoValue]: tempFilePaths});
         }
       })   

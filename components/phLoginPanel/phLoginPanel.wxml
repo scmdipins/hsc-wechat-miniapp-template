@@ -1,10 +1,12 @@
 <!--components/phLoginPanel/phLoginPanel.wxml-->
 
-<view class="phloginpanel-body" bindtap="onTap">
-	<image class="phloginpanel-img1" src="{{params.imgValue}}" />
-	<view class="phloginpanel-view">
-    <text class="phloginpanel-txt" style="color:{{params.txtColor}}">{{params.txtValue}}</text>
-		<view class="phloginpanel-tip" style="color:{{params.tipColor}}">{{params.tipValue}}</view>
+<view class="body-h phloginpanel-body" bindtap="onTap">  
+  <view class="view-h">
+	  <image class="phloginpanel-img" src="{{params.imgValue}}" />
+		<view class="view-v">	  	  
+      <text class="phloginpanel-txt" style="color:{{params.txtColor}}">{{params.txtValue}}</text>
+		  <text class="phloginpanel-tip" style="color:{{params.tipColor}}">{{params.tipValue}}</text>
+	  </view>
 	</view>
-	<image class="phloginpanel-img2" src="/images/right.png"/>
+	<text class="phloginpanel-greatthan" decode="{{true}}">&gt;</text>
 </view>

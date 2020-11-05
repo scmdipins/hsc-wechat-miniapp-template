@@ -1,17 +1,16 @@
-// components/phLabelItem/phLabelItem.js
+// components/phButton/phButton.js
 Component({
 
   data: {
     params : {
-      imgValue : null,
-      txtValue : '<phLabelItem>',
+      txtValue : '<phButton>',
       txtColor : null,
-      urlValue : null
+      bgColor : null
     }
   },
 
   attached: function () {
-    console.log('[phLabelItem] attached, this.dataset.params = ', this.dataset.params);
+    console.log('[phButton] attached, this.dataset.params = ', this.dataset.params);
     if ('string' === typeof this.dataset.params) {
       var jo = JSON.parse(this.dataset.params);
     } else {
@@ -19,14 +18,14 @@ Component({
       var jo = JSON.parse(sTemp);
     }      
     if (jo.txtValue == null) {
-      jo.txtValue = '<phLabelItem>';
+      jo.txtValue = '<phButton>';
     }
     this.setData({params : jo});
   },
 
   methods: {
     onTap : function () {
-      console.log('[phLabelItem] onTap, this.data.params = ', this.data.params);
+      console.log('[phButton] onTap, this.data.params = ', this.data.params);
       if (this.data.params.urlValue) {
         wx.navigateTo({
           url: this.data.params.urlValue,

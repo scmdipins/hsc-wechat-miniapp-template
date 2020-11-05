@@ -1,6 +1,8 @@
 <!--components/phLabelItem/phLabelItem.wxml-->
-<view class="phlabelitem-body" bindtap="onTap">
-	<image hidden="{{params.imgValue==null}}" class="phlabelitem-img" src="{{params.imgValue}}"></image>
-  <text class="phlabelitem-txt" style="color:{{params.txtColor}}">{{params.txtValue}}</text>  
+<view class="body-h phlabelitem-body" bindtap="onTap">
+  <view class="view-h">
+	  <image class="phlabelitem-img" hidden="{{params.imgValue==null}}" src="{{params.imgValue}}"></image>
+    <text class="phlabelitem-txt" style="color:{{params.txtColor}}">{{params.txtValue}}</text>  
+  </view>
   <slot></slot>
 </view>
