@@ -4,7 +4,7 @@
 		</view>
 		<view class="item-content">
 				<block wx:for="{{ cards }}" wx:for-item="item" wx:key="index">
-								<card imagePath="{{ item.imagePath }}" mainTitle="{{item.mainTitle}}" subTitle="{{item.subTitle}}" desc="{{ item.desc }}"></card>
+								<card imagePath="{{ item.imagePath }}" mainTitle="{{item.mainTitle}}" subTitle="{{item.subTitle}}" desc="{{ item.desc }}" navigatePage="{{ item.navigatePage }}"></card>
 				</block>
 		</view>
 </view>

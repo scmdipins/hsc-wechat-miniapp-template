@@ -11,12 +11,7 @@ Page({
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     cards: null
   },
-  //事件处理函数
-  bindViewTap: function() {
-    wx.navigateTo({
-      url: '../logs/logs'
-    })
-  },
+
   onLoad: function () {
     this.setData({cards: cardData.cards});
     if (app.globalData.userInfo) {
@@ -48,26 +43,11 @@ Page({
   },
 
   onShow: function(){
-    if (typeof this.getTabBar === 'function' &&
-    this.getTabBar()) {
-    this.getTabBar().setData({
-      selected: 0
-    })
+      if (typeof this.getTabBar === 'function' &&
+      this.getTabBar()) {
+      this.getTabBar().setData({
+        selected: 0
+      })
+    }
   }
-  },
-  getUserInfo: function(e) {
-    console.log(e)
-    app.globalData.userInfo = e.detail.userInfo
-    this.setData({
-      userInfo: e.detail.userInfo,
-      hasUserInfo: true
-    })
-  },
-
-  goMyselfPage:function(){
-    wx.navigateTo({
-      url: '../myselfInfo/myselfInfo',
-    })
-  }
-
 })

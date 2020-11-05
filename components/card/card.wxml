@@ -1,5 +1,5 @@
   <view class="content-body">
-    <view class="first-image" wx:if="{{ imagePath && imagePath != null && imagePath != ''}}" >
+    <view class="first-image" wx:if="{{ imagePath && imagePath != null && imagePath != ''}}" bindtap="toPage" data-page="{{ navigatePage }}">
       <image class="picture" src="{{ imagePath }}"></image>
     </view>
     <view class="title-main-css" wx:if="{{ mainTitle && mainTitle != null && mainTitle != ''}}" >

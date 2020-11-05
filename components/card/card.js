@@ -19,6 +19,10 @@ Component({
     desc: {
       type: String,
       value: null
+    },
+    navigatePage: {
+      type: String,
+      value: null
     }
   },
 
@@ -33,6 +37,13 @@ Component({
    * Component methods
    */
   methods: {
-
+    toPage: function(event){
+      var item = event.currentTarget.dataset.page;
+      if(item){
+        wx.navigateTo({
+          url: item,
+        })
+      }
+    }
   }
 })
