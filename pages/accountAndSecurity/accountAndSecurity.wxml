@@ -1,0 +1,17 @@
+
+  <view calss="page-body">
+  
+  <view class="phone-login-body">
+  
+  <phone-login  id="phoneLoginModal" phoneLoginModal="{{phoneLoginModal}}"></phone-login>
+  
+  </view>
+  
+  
+  
+  
+  
+  
+  
+  
+  </view>

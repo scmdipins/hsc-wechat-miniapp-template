@@ -5,7 +5,7 @@ var MyPageConsts = {
     "txtColor": "#000000",
     "tipValue": "点击注册/登录",
     "tipColor": "#7c7c7c",
-    "urlBeforeLogin": "/pages/my404/my404",
+    "urlBeforeLogin": "/pages/login/login",
     "urlAfterLogin": "/pages/accountpage/accountpage"
   },
   labelGroup : [

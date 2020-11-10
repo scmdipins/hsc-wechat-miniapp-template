@@ -1,12 +1,15 @@
 {
   "pages": [
+    "pages/login/login",
     "pages/home/home",
+   
     "pages/root/root",
     "pages/logs/logs",
     "pages/my404/my404",
     "pages/mypage/mypage",
-    "pages/accountpage/accountpage",
+    "pages/accountpage/account",
     "pages/settingpage/settingpage",
+    "pages/accountpage/accountpage",
     "pages/privacypolicypage/privacypolicypage",
     "pages/useragreementpage/useragreementpage",
     "pages/datacollectionpage/datacollectionpage"

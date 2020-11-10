@@ -6,10 +6,28 @@ App({
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
 
+
+    var appID="wx68d8de1da97f2931"
     // 登录
     wx.login({
       success: res => {
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
+        console.log(res)
+        var code = res.code
+        console.log(code)
+        
+        wx.request({
+          url: 'https://origin.dev.wechat.hsc.philips.com.cn/v2/wechat/login',
+          header:{'requestAppId':appID},
+          method: "post",
+          data: {
+            'user':{},'code':code
+          },
+          success: function (res) {
+            console.log(res.data.openid);
+            // that.setData(res.data);
+          }
+        })
       }
     })
     // 获取用户信息
