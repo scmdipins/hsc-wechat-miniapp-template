@@ -4,10 +4,40 @@ Component({
 
   data: {
     params : {
-      privacyPolicy:null,
-      userAgreement:null,
-      version:null,
-      logoutButton:null
+      labelGroup : [
+        {
+          "imgValue": null,
+          "txtValue": "Privacy Policy",
+          "txtColor": null,
+          "urlValue": "/pages/privacypolicypage/privacypolicypage",
+          "versionValue": "v0.01",
+          "versionColor": null,
+          "hasUrlMark": true
+        },
+        {
+          "imgValue": null,
+          "txtValue": "User Agreement",
+          "txtColor": null,
+          "urlValue": "/pages/useragreementpage/useragreementpage",
+          "versionValue": "v0.01",
+          "versionColor": null,
+          "hasUrlMark": true
+        },
+        {
+          "imgValue": null,
+          "txtValue": "Version",
+          "txtColor": null,
+          "urlValue": null,
+          "versionValue": "v0.01",
+          "versionColor": null,
+          "hasUrlMark": false
+        }
+      ],
+      logoutButton : {
+        "txtValue": "Log out",
+        "txtColor": "#FFFFFF",
+        "bgColor": "#5a9ada"
+      }  
     }
   },
 

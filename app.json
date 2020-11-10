@@ -1,13 +1,15 @@
 {
   "pages": [
     "pages/home/home",
-    "pages/myselfInfo/myselfInfo",
     "pages/root/root",
     "pages/logs/logs",
     "pages/my404/my404",
     "pages/mypage/mypage",
-    "pages/account/account",
-    "pages/settingpage/settingpage"
+    "pages/accountpage/accountpage",
+    "pages/settingpage/settingpage",
+    "pages/privacypolicypage/privacypolicypage",
+    "pages/useragreementpage/useragreementpage",
+    "pages/datacollectionpage/datacollectionpage"
   ],
   "tabBar": {
     "custom": true,
@@ -23,20 +25,8 @@
         "selectedIconPath": "images/home.png"
       },
       {
-        "text": "My",
-        "pagePath": "pages/myselfInfo/myselfInfo",
-        "iconPath": "images/my.png",
-        "selectedIconPath": "images/myblue.png"
-      },
-      {
         "text": "My2",
         "pagePath": "pages/mypage/mypage",
-        "iconPath": "images/my.png",
-        "selectedIconPath": "images/myblue.png"
-      },
-      {
-        "text": "Account",
-        "pagePath": "pages/account/account",
         "iconPath": "images/my.png",
         "selectedIconPath": "images/myblue.png"
       }

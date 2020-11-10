@@ -2,7 +2,6 @@
   "component": true,
   "usingComponents": {
     "phLabelItem" : "/components/phLabelItem/phLabelItem",
-    "phLine" : "/components/phLine/phLine",
-    "phButton" : "/components/phButton/phButton"
+    "phLine" : "/components/phLine/phLine"    
   }
 }

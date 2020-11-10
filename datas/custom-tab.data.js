@@ -5,33 +5,19 @@ var tabBar = {
   selectedColor: "#5a9ada",
   background: "white",
   list: [{
-      "text": "Home",
-      "naviTitle": "Home",
+      "text": "首页",
+      "naviTitle": "首页",
       "pagePath": "/pages/home/home",
       "iconPath": "/images/homehui.png",
       "selectedIconPath": "/images/home.png"
     },
     {
-      "text": "My",
-      "naviTitle": "My",
-      "pagePath": "/pages/myselfInfo/myselfInfo",
-      "iconPath": "/images/my.png",
-      "selectedIconPath": "/images/myblue.png"
-    },
-    {
-      "text": "My2",
-      "naviTitle": "My2",
+      "text": "我的",
+      "naviTitle": "我的",
       "pagePath": "/pages/mypage/mypage",
       "iconPath": "/images/my.png",
       "selectedIconPath": "/images/myblue.png"
-    },
-    {
-      "text": "Account",
-      "naviTitle": "Account",
-      "pagePath": "/pages/account/account",
-      "iconPath": "/images/my.png",
-      "selectedIconPath": "/images/myblue.png"
-    }        
+    }   
   ]
 }
 module.exports = {

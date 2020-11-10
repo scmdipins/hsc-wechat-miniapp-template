@@ -2,7 +2,7 @@
 <view class="body-v" bindtap="onTap">
   <block wx:for="{{ params }}" wx:for-item="labelItem" wx:key="index">
     <phLabelItem data-params="{{labelItem}}"></phLabelItem>
-    <phLine data-params='{"heightValue":"1px","colorValue":"#dddddd"}' />
+    <phLine />
   </block>
   <slot></slot>
 </view>

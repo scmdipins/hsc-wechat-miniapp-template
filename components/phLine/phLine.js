@@ -4,12 +4,15 @@ Component({
   data: {
     params : {
       heightValue : '1px',
-      colorValue : '#e4e4e4'
+      colorValue : '#dddddd'
     }
   },
 
   attached: function () {
     console.log('[phLine] attached, this.dataset.params = ', this.dataset.params);
+    if (!this.dataset.params) {
+      return;
+    }    
     if ('string' === typeof this.dataset.params) {
       var jo = JSON.parse(this.dataset.params);
     } else {
@@ -20,7 +23,7 @@ Component({
       jo.heightValue = '1px';
     }
     if (jo.colorValue == null) {
-      jo.colorValue = '#e4e4e4';
+      jo.colorValue = '#dddddd';
     }
     this.setData({params : jo});
   },

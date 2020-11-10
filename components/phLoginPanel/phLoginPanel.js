@@ -1,4 +1,7 @@
 // components/phLoginPanel/phLoginPanel.js
+
+const app = getApp();
+
 Component({
 
   data: {
@@ -6,9 +9,10 @@ Component({
       imgValue: "/images/head@3x.png",
       txtValue: "Login",
       txtColor: null,
-      urlValue: null,
       tipValue: "Click to sign up/login",
-      tipColor: null
+      tipColor: null,
+      urlBeforeLogin: "/pages/my404/my404",
+      urlAfterLogin: "/pages/mypage/mypage"      
     }
   },
 
@@ -20,11 +24,20 @@ Component({
   methods: {
     onTap : function () {
       console.log('[phLoginPanel] onTap, this.data.params = ', this.data.params);
-      if (this.data.params.urlValue) {
-        wx.navigateTo({
-          url: this.data.params.urlValue,
-        })
+      if (!app.globalData.isLogin) {
+        if (this.data.params.urlBeforeLogin) {
+          wx.navigateTo({
+            url: this.data.params.urlBeforeLogin,
+          })
+        }
+      } else {
+        if (this.data.params.urlAfterLogin) {
+          wx.navigateTo({
+            url: this.data.params.urlAfterLogin,
+          })
+        }        
       }
+
     }
   }
 })

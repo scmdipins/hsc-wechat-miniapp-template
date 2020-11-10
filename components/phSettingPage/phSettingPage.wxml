@@ -1,24 +1,15 @@
 <!--components/phSettingPage/phSettingPage.wxml-->
 
-<phLabelItem data-params="{{params.privacyPolicy}}">
-  <view class="view-h">
-    <text class="phsettingpage-txt">v0.01</text>
-    <text class="phsettingpage-greatthan" decode="{{true}}">&gt;</text>
-  </view>
-</phLabelItem>
-<phLine data-params='{"heightValue":"1px","colorValue":"#e4e4e4"}' />
-
-<phLabelItem data-params="{{params.userAgreement}}">
-  <view class="view-h">
-    <text class="phsettingpage-txt">v0.01</text>
-    <text class="phsettingpage-greatthan" decode="{{true}}">&gt;</text>
-  </view>
-</phLabelItem>
-<phLine data-params='{"heightValue":"1px","colorValue":"#e4e4e4"}' />
-
-<phLabelItem data-params="{{params.version}}">
-  <text class="phsettingpage-txt">v0.01</text>
-</phLabelItem>
-<phLine data-params='{"heightValue":"1px","colorValue":"#e4e4e4"}' />
+<view class="body-v" bindtap="onTap">
+  <block wx:for="{{ params.labelGroup }}" wx:for-item="labelItem" wx:key="index">
+    <phLabelItem data-params="{{labelItem}}">
+      <view class="view-h">
+        <text class="phsettingpage-txt" style="color:{{labelItem.versionColor}}">{{labelItem.versionValue}}</text>
+        <text wx:if="{{labelItem.hasUrlMark}}" class="phsettingpage-greatthan" decode="{{true}}" style="color:{{labelItem.versionColor}}">&gt;</text>
+      </view>
+    </phLabelItem>
+    <phLine />
+  </block>
+</view>
 
 <phButton class="phsettingpage-btn" data-params="{{params.logoutButton}}" />

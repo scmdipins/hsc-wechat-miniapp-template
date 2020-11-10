@@ -1,2 +1,0 @@
-<!--pages/account/account.wxml-->
-<phAccountPage data-params="{{AccountConsts}}" />

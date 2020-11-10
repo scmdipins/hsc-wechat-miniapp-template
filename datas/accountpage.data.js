@@ -1,23 +1,23 @@
-var AccountConsts = {
+var AccountPageConsts = {
   profilePhoto : {
-    "txtValue": "Profile photo",
+    "txtValue": "头像",
     "txtColor": "#000000",
     // "urlValue": "/pages/my404/my404",
     "photoValue": "/images/myblue@3x.png"
   },
   userName : {
-    "txtValue": "User name",
+    "txtValue": "昵称",
     "txtColor": "#000000",
     "inputValue": "Luna",
     "maxLength": null
   },
   accountAndSecurity : {    
-    "txtValue": "Account and security",
+    "txtValue": "帐号与安全",
     "txtColor": "#000000",
     "urlValue": "/pages/my404/my404"
   }
 }
 
 module.exports = {
-  AccountConsts: AccountConsts
+  AccountPageConsts: AccountPageConsts
 }

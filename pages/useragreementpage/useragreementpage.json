@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "phUserAgreementPage" : "/components/phUserAgreementPage/phUserAgreementPage"
+  }
+}

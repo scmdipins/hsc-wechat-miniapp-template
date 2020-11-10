@@ -8,13 +8,13 @@ Component({
       profilePhoto : {
         "txtValue": "Profile phote",
         "txtColor": null,
-        "urlValue": "/pages/my404/my404",
+        //"urlValue": "/pages/my404/my404",
         "photoValue": "/images/head@3x.png"
       },
       userName : {
         "txtValue": "User name",
         "txtColor": null,
-        "urlValue": "/pages/my404/my404",
+        //"urlValue": "/pages/my404/my404",
         "inputValue": "Luna",
         "maxLength": null
       },
@@ -34,11 +34,11 @@ Component({
       var sTemp = JSON.stringify(this.dataset.params);        
       var jo = JSON.parse(sTemp);
     }      
-    if (jo.ProfilePhoto.photoValue == null) {
-      jo.ProfilePhoto.photoValue = '/images/head@3x.png';
+    if (jo.profilePhoto.photoValue == null) {
+      jo.profilePhoto.photoValue = '/images/head@3x.png';
     }
-    if (jo.UserName.maxLength == null) {
-      jo.UserName.maxLength = 50;
+    if (jo.userName.maxLength == null) {
+      jo.userName.maxLength = 50;
     }    
     this.setData({params : jo});
   },
@@ -63,7 +63,7 @@ Component({
     onProfilePhoto : function () {
       var that = this;
       wx.showActionSheet({
-        itemList: ['Take a photo', 'Select from album'],
+        itemList: ['拍照', '从手机相册选择'],
         success: function(res) {
           console.log(res.tapIndex);
           if (res.tapIndex == 0) {

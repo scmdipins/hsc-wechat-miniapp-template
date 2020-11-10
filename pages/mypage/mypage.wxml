@@ -1,3 +1,6 @@
 <!--pages/mypage.wxml-->
 
 <phMyPage data-params="{{MyPageConsts}}" />
+
+
+<button bindtap="fakeLogin" >fakeLogin</button>

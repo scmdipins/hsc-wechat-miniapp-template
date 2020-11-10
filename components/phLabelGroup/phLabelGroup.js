@@ -17,7 +17,7 @@ Component({
   },
 
   attached: function () { 
-    console.log('[phLabelGroup] attached, this.dataset.params = ', this.dataset.params);
+    console.log('[phLabelGroup] attached, this.dataset.params = ', this.dataset.params);   
     this.setData({params: this.dataset.params});
   },
 

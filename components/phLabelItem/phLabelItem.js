@@ -12,6 +12,9 @@ Component({
 
   attached: function () {
     console.log('[phLabelItem] attached, this.dataset.params = ', this.dataset.params);
+    if (!this.dataset.params) {
+      return;
+    }        
     if ('string' === typeof this.dataset.params) {
       var jo = JSON.parse(this.dataset.params);
     } else {
