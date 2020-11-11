@@ -19,7 +19,7 @@ Component({
     inputVerifyCode: true,
     codeBtnDisabled: true,
     inputed: false,
-    time: 30,
+    time: 60,
     checked: false,
     phoneValid: false,
     codeValid: false,
@@ -81,11 +81,11 @@ Component({
     getCode: function () {
 
       this.setData({
-        inputVerifyCode: false,
-        countingDown: true,
-        time: 30
-      }),
-      this.startCount()
+          inputVerifyCode: false,
+          countingDown: true,
+          time: 60
+        }),
+        this.startCount()
 
     },
 
@@ -149,7 +149,7 @@ Component({
       })
     },
 
-    loginRegister(){
+    loginRegister() {
       wx.switchTab({
         url: this.data.phoneLoginModal.loginSuccess,
       })
