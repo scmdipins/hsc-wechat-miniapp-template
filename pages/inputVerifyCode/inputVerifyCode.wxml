@@ -1,0 +1,9 @@
+<!--pages/inputVerifyCode/inputVerifyCode.wxml-->
+<view class="page-content">
+
+	<view class="input">
+		<verifyCode-modal id="verifyModal" verifyModal="{{verifyModal}}"></verifyCode-modal>
+	</view>
+
+
+</view>

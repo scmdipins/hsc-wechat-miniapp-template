@@ -2,6 +2,7 @@
   "pages": [
     "pages/home/home",
     "pages/login/login",
+    "pages/inputVerifyCode/inputVerifyCode",
     "pages/root/root",
     "pages/logs/logs",
     "pages/my404/my404",
@@ -12,6 +13,7 @@
     "pages/privacypolicypage/privacypolicypage",
     "pages/useragreementpage/useragreementpage",
     "pages/datacollectionpage/datacollectionpage"
+    
   ],
   "tabBar": {
     "custom": true,

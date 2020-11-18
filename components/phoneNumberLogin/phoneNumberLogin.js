@@ -15,17 +15,11 @@ Component({
    * 组件的初始数据
    */
   data: {
-    countingDown: false,
-    inputVerifyCode: true,
     codeBtnDisabled: true,
     inputed: false,
-    time: 60,
     checked: false,
     phoneValid: false,
     codeValid: false,
-    plateNumber: [],
-    btnUsability: false
-
   },
 
   /**
@@ -79,34 +73,9 @@ Component({
       }
     },
     getCode: function () {
-
-      this.setData({
-          inputVerifyCode: false,
-          countingDown: true,
-          time: 60
-        }),
-        this.startCount()
-
-    },
-
-    startCount() {
-      var that = this
-      let time = that.data.time
-      countDownInterval = setInterval(function () {
-        if (time <= 0) {
-          clearInterval(countDownInterval)
-          that.checkValid(that.data.phoneNum)
-          that.setData({
-            countingDown: false
-          })
-          that.inputPhoneNum()
-        } else {
-          time--
-          that.setData({
-            time: time
-          })
-        }
-      }, 1000)
+       wx.navigateTo({
+         url: this.data.phoneLoginModal.inputVerifyCodePath,
+       }) 
     },
 
 
@@ -149,10 +118,6 @@ Component({
       })
     },
 
-    loginRegister() {
-      wx.switchTab({
-        url: this.data.phoneLoginModal.loginSuccess,
-      })
-    }
+
   }
 })

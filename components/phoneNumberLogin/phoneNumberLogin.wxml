@@ -1,4 +1,4 @@
-<view class="page-body" wx:if="{{inputVerifyCode}}">
+<view class="page-body">
 	<view class="top-title">
 		手机号登陆/注册
 	</view>
@@ -47,7 +47,7 @@
 
 </view>
 
-<view wx:else class="deputyPage">
+<!-- <view class="deputyPage">
 
 	<view class="top-title">
 		输入验证码
@@ -82,4 +82,4 @@
 
 	</view>
 
-</view>
+</view> -->

@@ -17,6 +17,8 @@ var phoneLoginModal = {
   "userAgreementPath":"/pages/privacy/privacy",
   "privacyPolicyPath":"/pages/privacy/privacy",
   "loginSuccess":"/pages/mypage/mypage",
+
+  "inputVerifyCodePath":"/pages/inputVerifyCode/inputVerifyCode"
 }
 
 module.exports = {
