@@ -4,36 +4,50 @@ const app = getApp();
 
 Component({
 
-  data: {
-    params : {
-      imgValue: "/images/head@3x.png",
-      txtValue: "Login",
-      txtColor: null,
-      tipValue: "Click to sign up/login",
-      tipColor: null,
-      urlBeforeLogin: "/pages/my404/my404",
-      urlAfterLogin: "/pages/mypage/mypage"      
+  properties: {
+    imgValue: {
+      type: String,
+      value: "/images/head@3x.png"
+    },
+    txtValue: {
+      type: String,
+      value: "Login"
+    },
+    txtColor: {
+      type: String,
+      value: null
+    },
+    tipValue: {
+      type: String,
+      value: "Click to sign up/login"
+    },
+    tipColor: {
+      type: String,
+      value: null
+    },
+    urlBeforeLogin: {
+      type: String,
+      value: "/pages/my404/my404"
+    },
+    urlAfterLogin: {
+      type: String,
+      value: "/pages/accountpage/accountpage"
     }
-  },
-
-  attached: function () {
-    console.log('[phLoginPanel] attached, this.dataset.params = ', this.dataset.params);
-    this.setData({params : this.dataset.params});
   },
 
   methods: {
     onTap : function () {
-      console.log('[phLoginPanel] onTap, this.data.params = ', this.data.params);
+      console.log('[phLoginPanel] onTap, this.data = ', this.data);
       if (!app.globalData.isLogin) {
-        if (this.data.params.urlBeforeLogin) {
+        if (this.data.urlBeforeLogin) {
           wx.navigateTo({
-            url: this.data.params.urlBeforeLogin,
+            url: this.data.urlBeforeLogin,
           })
         }
       } else {
-        if (this.data.params.urlAfterLogin) {
+        if (this.data.urlAfterLogin) {
           wx.navigateTo({
-            url: this.data.params.urlAfterLogin,
+            url: this.data.urlAfterLogin,
           })
         }        
       }

@@ -1,5 +1,6 @@
 // pages/login/login.js
-var loginData = require("../../datas/register.data")
+const loginData = require("../../datas/register.data")
+const hsc = getApp().hsc
 
 Page({
 

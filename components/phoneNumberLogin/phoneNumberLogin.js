@@ -1,5 +1,6 @@
 // components/phoneNumberLogin/phoneNumberLogin.js
 const phoneLoginData = require("../../datas/phoneNumber.data")
+const hsc = getApp().hsc
 var countDownInterval
 Component({
   /**
@@ -20,6 +21,7 @@ Component({
     checked: false,
     phoneValid: false,
     codeValid: false,
+    phoneNum: null
   },
 
   /**
@@ -29,6 +31,7 @@ Component({
     inputPhoneNum: function (e) {
       let phoneNum = e.detail.value
       this.checkValid(phoneNum)
+      this.setData({phoneNum: phoneNum});
     },
 
     checkValid: function (phoneNum) {
@@ -73,9 +76,24 @@ Component({
       }
     },
     getCode: function () {
-       wx.navigateTo({
-         url: this.data.phoneLoginModal.inputVerifyCodePath,
-       }) 
+     
+        const phoneInfo= {
+          phone: this.data.phoneNum
+        }
+        const obj = {
+          url: 'hsc/template/user',
+          method: 'POST',
+          data: phoneInfo
+        }
+        hsc.request(obj).then(res => {
+          if(res.statusCode == 200){
+            wx.navigateTo({
+              url: this.data.phoneLoginModal.inputVerifyCodePath+'?key='+res.data.key + '&navigePage=../../pages/home/home&apiUrl=hsc/template/user/activation',
+            })
+          }
+        }).catch(res => {
+          console.log(res.errMsg)
+        })
     },
 
 

@@ -2,10 +2,10 @@
 
 <view class="body-h phloginpanel-body" bindtap="onTap">  
   <view class="view-h">
-	  <image class="phloginpanel-img" src="{{params.imgValue}}" />
+	  <image class="phloginpanel-img" src="{{imgValue}}" />
 		<view class="view-v">	  	  
-      <text class="phloginpanel-txt" style="color:{{params.txtColor}}">{{params.txtValue}}</text>
-		  <text class="phloginpanel-tip" style="color:{{params.tipColor}}">{{params.tipValue}}</text>
+      <text class="phloginpanel-txt" style="color:{{txtColor}}">{{txtValue}}</text>
+		  <text class="phloginpanel-tip" style="color:{{tipColor}}">{{tipValue}}</text>
 	  </view>
 	</view>
 	<text class="phloginpanel-greatthan" decode="{{true}}">&gt;</text>

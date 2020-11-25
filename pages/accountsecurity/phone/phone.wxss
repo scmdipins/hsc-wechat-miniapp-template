@@ -1,0 +1,100 @@
+/* pages/accountsecurity/phone/phone.wxss */
+.ph-comment {
+    margin-left: 6.4vw;
+    margin-top: 2.5vh;
+    width: 80vw;
+    height: 80rpx;
+    font-size: 28rpx;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #595959;
+    font-family: CentraleSans;
+    font-weight: normal;
+}
+
+.ph-edit {
+  position: relative; 
+  margin-top: 13.5vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center
+}
+
+.edit-block {
+    width: 91vw;
+    height: 80rpx;
+    line-height: 80rpx;
+    border-radius: 4rpx;
+    border: solid 1px #c3c7c8;
+    background-color: #ffffff;
+
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.content-view {
+  margin-left: 3.2vw;
+  line-height: inherit;
+  width: 7.73vw;
+  align-items: center;
+  height: 44rpx;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.content {
+  font-family: PingFangSC;
+  font-size: 35rpx;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #6f7b79;
+}
+
+.content-split {
+  height: 48rpx;
+  width: 2rpx;
+  margin-left: 4.13vw;
+  border-left: 2rpx solid #c3c7c8;
+}
+
+.content-input {
+  margin-left: 2.8vw;
+  height: 44rpx !important;
+  min-height: unset !important;
+  /* background: red; */
+  width: 68vw;
+}
+
+.ph-button-view {
+  position: relative;
+  margin-top: 4.2vh;
+}
+
+.ph-button {
+  width: 91vw !important;
+  height: 80rpx;
+  line-height: 80rpx !important;
+  border-radius: 4rpx;
+  background-color: #dddedf;
+
+  padding: unset;
+  transform: rotate(-360deg);
+  font-family: PingFangSC;
+  font-size: 32rpx !important;
+  font-weight: 300 !important;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+}

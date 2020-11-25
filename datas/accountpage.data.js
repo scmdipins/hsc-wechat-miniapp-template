@@ -14,7 +14,7 @@ var AccountPageConsts = {
   accountAndSecurity : {    
     "txtValue": "帐号与安全",
     "txtColor": "#000000",
-    "urlValue": "/pages/my404/my404"
+    "urlValue": "/pages/accountsecurity/accountsecurity"
   }
 }
 

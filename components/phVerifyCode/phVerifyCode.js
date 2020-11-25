@@ -1,12 +1,25 @@
 // components/phVerifyCode/phVerifyCode.js
 const verifyCodeData = require("../../datas/inputVerifyCode.data")
+const hsc = getApp().hsc
 var countDownInterval
 Component({
   /**
    * 组件的属性列表
    */
   properties: {
-    verifyModal: Object
+    verifyModal: Object,
+    navigePage: {
+      type: String,
+      value: null
+    },
+    verificationKey: {
+      type: String,
+      value: null
+    },
+    apiUrl: {
+      type: String,
+      value: null
+    }
   },
 
   /**
@@ -63,6 +76,7 @@ Component({
     },
 
     reSendVerifyCode() {
+      this.setData({plateNumber: []});
       this.setData({
         time: this.data.verifyModal.time,
         countingDown: true
@@ -70,6 +84,35 @@ Component({
 
       this.startCount()
 
+    },
+    loginRegister(){
+      const phoneInfo= {
+        code: this.data.plateNumber.join(''),
+        key: this.data.verificationKey
+      }
+      const obj = {
+        url: this.data.apiUrl ? this.data.apiUrl : 'hsc/template/sms/verification',
+        method: 'POST',
+        data: phoneInfo
+      }
+      hsc.request(obj).then(res => {
+        if(res.statusCode == 200){
+          if(this.data.apiUrl == 'hsc/template/user/activation'){
+            getApp().globalData.isLogin = true;
+            getApp().globalData.phone = phone;
+          }
+          // this.triggerEvent('callBack')
+          wx.navigateTo({
+            url: this.data.navigePage.trim(),
+          }).catch(
+            wx.switchTab({
+              url: this.data.navigePage.trim(),
+            })
+          )
+        }
+      }).catch(res => {
+        console.log(res.errMsg)
+      })
     }
   }
 })

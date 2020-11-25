@@ -2,7 +2,7 @@
 <view class="root">
     <view class="container">
         <index wx:if="{{ selectedItem.pagePath === '/pages/home/home' }}"></index>
-        <user wx:if="{{ selectedItem.pagePath === '/pages/myselfInfo/myselfInfo' }}"></user> 
+        <mypage wx:if="{{ selectedItem.pagePath === '/pages/myselfInfo/myselfInfo' }}"></mypage> 
     </view>
     <view class="tabBar">
         <block wx:for="{{ tabBar.list }}" wx:for-item="item" wx:key="index">

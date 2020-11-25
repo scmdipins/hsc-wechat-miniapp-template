@@ -1,4 +1,28 @@
 // components/phAccountPage/phAccountPage.js
+const app = getApp()
+// const cameraService = require('../../utils/cameraService')
+
+
+// require('jsbn');
+// require('core-js');
+// require('zlib');
+// require('httpx');
+// const Client = require('../../utils/aliyun-api-gateway/client');
+// const client = new Client('203859798','Fbo9eLXpEePZC3I0jSatecjsx9tSvOwm');
+
+// async function getByOssCredential() {
+//   var result = await client.get('https://origin.dev.wechat.hsc.philips.com.cn/oss/presignedurl/skincubator-miniapp', {
+//     query: {
+//       'objectPath' : '11111.jpg',
+//       'action' : 'get'
+//     },
+//     headers: {
+//       accept: 'application/json'
+//     }  
+//   });
+//   console.log(JSON.stringify(result));
+// }
+
 var arr = [];
 
 Component({
@@ -45,6 +69,23 @@ Component({
 
   methods: {  
 
+    uploadImg : function(tempFilePaths) {
+      console.log('tempFilePaths', tempFilePaths);
+      // getByOssCredential().catch(
+      //   (err) => {
+      //     console.error(err);
+      //   }
+      // );
+
+      // cameraService.getReportId(tempFilePaths).then(res => {
+      //   console.log('res = ', res);
+      //   // preference.reportId = res
+      //   // wx.redirectTo({
+      //   //   url: '/pages/assessment/hydration/hydration?nextPreference=' + encodeURIComponent(JSON.stringify(preference))
+      //   // })   
+      // })
+    },
+
     chooseImage : function(byCamera) {
       var that = this;
       wx.chooseImage({
@@ -56,6 +97,8 @@ Component({
           const tempFilePaths = res.tempFilePaths;
           var photoValue = 'params.profilePhoto.photoValue';
           that.setData({[photoValue]: tempFilePaths});
+          // upload oss
+          that.uploadImg(tempFilePaths);
         }
       })   
     },

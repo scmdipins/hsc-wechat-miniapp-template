@@ -6,13 +6,27 @@ Page({
    * 页面的初始数据
    */
   data: {
-    verifyModal:null
+    verifyModal: null,
+    navigePage: null,
+    verificationKey: null,
+    apiUrl: null
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    if(options.navigePage){
+      this.setData({ navigePage: options.navigePage });
+    }
+    if(options.key){
+      this.setData({ verificationKey: options.key });
+    }
+
+    if(options.apiUrl){
+      this.setData({ apiUrl: options.apiUrl });
+    }
+
     this.setData({
       verifyModal: verifyCodeData.VerifyCOdeData
     })

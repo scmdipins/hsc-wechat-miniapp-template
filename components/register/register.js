@@ -1,5 +1,6 @@
 const registerData = require("../../datas/register.data")
-
+const hsc = getApp().hsc
+const globalData = getApp().globalData
 // components/register/register.js
 Component({
   /**
@@ -35,19 +36,43 @@ Component({
       
     },
 
-    getPhoneNumber: function (e) {
-      if (e.detail.errMsg == 'getPhoneNumber:ok') {
-       wx.switchTab({
-         url: this.data.dataModal.agreeWechatLoginPath,
-       })
-      } else {
-        console.log(e.detail.errMsg);
+    // getPhoneNumber: function (e) {
+    //   if (e.detail.errMsg == 'getPhoneNumber:ok') {
+    //    wx.switchTab({
+    //      url: this.data.dataModal.agreeWechatLoginPath,
+    //    })
+    //   } else {
+    //     console.log(e.detail.errMsg);
+    //   }
+    //   wx.switchTab({
+    //     url: this.data.dataModal.refusedWechatLoginPath
+    //   });
+    // },
+    getPhoneNumber(e) {
+      if(e.detail.iv && e.detail.encryptedData){
+        var phoneInfo= {
+          encryptedData: e.detail.encryptedData,
+          iv: e.detail.iv
+        }
+        var obj = {
+          url: 'hsc/template/user',
+          method: 'POST',
+          data: phoneInfo
+        }
+        hsc.request(obj).then(res => {
+          if(res.statusCode == 200){
+            globalData.phone = res.data.phone;
+            globalData.isLogin = true;
+            wx.switchTab({
+              url: '../../pages/home/home',
+            })
+          }
+        }).catch(res => {
+          console.log(res.errMsg)
+        })
+      
       }
-      wx.switchTab({
-        url: this.data.dataModal.refusedWechatLoginPath
-      });
     },
-
 
     loginByPhoneNumber:function(){
       wx.navigateTo({

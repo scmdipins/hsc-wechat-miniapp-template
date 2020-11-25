@@ -4,11 +4,12 @@ Component({
   attached() {
   },
 
-  created: function(){
-    const _this = this
-    const navtitle = _this.data.list[_this.data.selected].naviTitle;
-    wx.setNavigationBarTitle({ title: navtitle })
-  },
+  // ready: function(){
+  //   const _this = this
+  //   const navtitle = _this.data.list[_this.data.selected].naviTitle;
+  //   wx.setNavigationBarTitle({ title: navtitle })
+  // },
+
   methods: {
     switchTab(e) {
       const data = e.currentTarget.dataset;

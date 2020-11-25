@@ -1,35 +1,10 @@
 //app.js
+var hsc = require('utils/hsc-wx-sdk.js')
+var track = require('utils/hsc-wx-sdk-user.js')
+// var track = require('utils/http.js')
 App({
   onLaunch: function () {
-    // 展示本地存储能力
-    var logs = wx.getStorageSync('logs') || []
-    logs.unshift(Date.now())
-    wx.setStorageSync('logs', logs)
-
-
-    var appID="wx68d8de1da97f2931"
-    // 登录
-    wx.login({
-      success: res => {
-        // 发送 res.code 到后台换取 openId, sessionKey, unionId
-        console.log(res)
-        var code = res.code
-        console.log(code)
-        
-        wx.request({
-          url: 'https://origin.dev.wechat.hsc.philips.com.cn/v2/wechat/login',
-          header:{'requestAppId':appID},
-          method: "post",
-          data: {
-            'user':{},'code':code
-          },
-          success: function (res) {
-            console.log(res.data.openid);
-            // that.setData(res.data);
-          }
-        })
-      }
-    })
+  
     // 获取用户信息
     wx.getSetting({
       success: res => {
@@ -39,7 +14,7 @@ App({
             success: res => {
               // 可以将 res 发送给后台解码出 unionId
               this.globalData.userInfo = res.userInfo
-
+              console.log(res.userInfo);
               // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
               // 所以此处加入 callback 以防止这种情况
               if (this.userInfoReadyCallback) {
@@ -52,8 +27,12 @@ App({
     })
   },
   globalData: {
+    phone: null,
+    name: null,
+    mail: null,
+    isLogin: false,
     userInfo: null,
-    isLogin:false,
-
-  }
+    ossAssetsUrl: 'https://skincubator-miniapp-prod-public.oss-cn-shanghai.aliyuncs.com/assets/'
+  },
+  hsc: hsc
 })

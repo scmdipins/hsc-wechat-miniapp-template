@@ -1,13 +1,20 @@
 {
   "pages": [
     "pages/home/home",
-    "pages/login/login",
+    "pages/accountsecurity/accountsecurity",
     "pages/inputVerifyCode/inputVerifyCode",
+
+    "pages/login/login",
+
+    "pages/accountsecurity/logoff/logoff",
+    "pages/accountsecurity/mail/mail",
+    "pages/accountsecurity/phone/phone",
+    "pages/accountsecurity/password/password",
+  
     "pages/root/root",
     "pages/logs/logs",
     "pages/my404/my404",
     "pages/mypage/mypage",
-    "pages/accountpage/account",
     "pages/settingpage/settingpage",
     "pages/accountpage/accountpage",
     "pages/privacypolicypage/privacypolicypage",

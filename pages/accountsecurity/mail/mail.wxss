@@ -1,0 +1,112 @@
+.mail-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.mail-title {
+  margin-top: 12.14vh;
+  margin-left: 4.53vw;
+
+  font-family: PingFangSC;
+  font-size: 60rpx;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #383838
+}
+
+.mail-comment {
+  /* width: 325px; */
+  height: 34rpx;
+  margin: 0.9vh 4vw 0 4vw;
+  font-family: PingFangSC;
+  font-size: 24rpx;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #9e9e9e;
+}
+
+.mail-input {
+  margin: 5vh 4.8vw 0 4vw;
+  height: 80rpx;
+  border-radius: 4rpx;
+  border: solid 2rpx #c3c7c8;
+}
+
+.mail-input-opr {
+  margin: 20rpx 226rpx 16rpx 38rpx;
+  /* background: red; */
+  height: 44rpx;
+  font-family: PingFangSC;
+  font-size: 32rpx;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 44rpx;
+  letter-spacing: normal;
+  min-height: unset;
+  color: #9e9e9e;
+}
+
+.warn-block {
+  margin:1vh 8.53vw 0 4.8vw;
+}
+
+.warn-message {
+    height: 34rpx;
+    /* margin: 26rpx 64rpx 9px 18px; */
+    font-size: 24rpx;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #de7510;
+    font-family: CentraleSans;
+    font-weight: normal;
+}
+
+.mail-btn-summit {
+  margin:4.8vh 4.27vw 0 4.53vw;
+
+  height: 80rpx;
+  /* padding: 18rpx 32rpx 16rpx 32rpx; */
+  border-radius: 4rpx;
+  background-color: #0074bd;
+}
+
+.mail-btn-skip {
+  margin:0 4.27vw 0 4.53vw;
+  height: 80rpx;
+  border-radius: 4rpx;
+}
+
+.mail-btn {
+  height: 44rpx;
+  margin: 18rpx 32rpx 16rpx 32rpx;
+  width: unset !important;
+  transform: rotate(-360deg);
+  font-family: CentraleSans;
+  font-size: 32rpx;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  padding: unset !important;
+  background-color: unset;
+}
+
+.btn-summit {
+  color: #ffffff;
+}
+
+.btn-skip {
+  color: #0074bd;
+}

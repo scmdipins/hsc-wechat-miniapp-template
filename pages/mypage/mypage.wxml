@@ -1,6 +1,7 @@
 <!--pages/mypage.wxml-->
 
-<phMyPage data-params="{{MyPageConsts}}" />
-
+<phMyPage imgValue="{{imgValue}}" txtValue="{{txtValue}}" txtColor="{{txtColor}}" tipValue="{{tipValue}}" tipColor="{{tipColor}}" urlBeforeLogin="{{urlBeforeLogin}}" urlAfterLogin="{{urlAfterLogin}}" labelGroup="{{labelGroup}}" />
 
 <button bindtap="fakeLogin" >fakeLogin</button>
+
+<button bindtap="testOSS" >testOSS</button>
