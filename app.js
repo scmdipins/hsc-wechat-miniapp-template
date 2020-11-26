@@ -32,7 +32,9 @@ App({
     mail: null,
     isLogin: false,
     userInfo: null,
-    ossAssetsUrl: 'https://skincubator-miniapp-prod-public.oss-cn-shanghai.aliyuncs.com/assets/'
+    ossAssetsUrl: 'https://skincubator-miniapp-prod-public.oss-cn-shanghai.aliyuncs.com/assets/',
+    ossHostUrl: 'https://origin.dev.wechat.hsc.philips.com.cn',
+    ossPresignedUrl: '/oss/presignedurl/skincubator-miniapp',
   },
   hsc: hsc
 })

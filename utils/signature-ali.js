@@ -1,4 +1,4 @@
-var CryptoJS = require('../utils/crypto-js-4.0.0/crypto-js.js');
+var CryptoJS = require('./crypto-js-4.0.0/crypto-js.js');
 
 class SignDatas {
 
@@ -18,7 +18,7 @@ class SignDatas {
     // console.log('urlPath', urlPath);
     // console.log('requestData', requestData);
 
-    var dateObject = new Date();
+    var dateObject = Date;
     this.date = dateObject.toLocaleString();
 
     this.nonce = this.createUuid();
@@ -32,7 +32,7 @@ class SignDatas {
     this.textToSign += 'x-ca-signaturemethod:' + this.signatureMethod + '\n';
     //this.textToSign += '/oss/presignedurl/skincubator-miniapp?action=get&objectPath=11111.jpg';
     this.textToSign += urlPath + this.requestDataToString(requestData); // '?action=get&objectPath=11111.jpg';
-    console.log('textToSign\n' + this.textToSign.replace(/\n/g, '#'));  
+    // console.log('textToSign\n' + this.textToSign.replace(/\n/g, '#'));  
     var hash = CryptoJS.HmacSHA256(this.textToSign, this.appSecret)
     this.signature = hash.toString(CryptoJS.enc.Base64)
   }

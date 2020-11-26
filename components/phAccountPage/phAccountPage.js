@@ -1,29 +1,6 @@
 // components/phAccountPage/phAccountPage.js
 const app = getApp()
-// const cameraService = require('../../utils/cameraService')
-
-
-// require('jsbn');
-// require('core-js');
-// require('zlib');
-// require('httpx');
-// const Client = require('../../utils/aliyun-api-gateway/client');
-// const client = new Client('203859798','Fbo9eLXpEePZC3I0jSatecjsx9tSvOwm');
-
-// async function getByOssCredential() {
-//   var result = await client.get('https://origin.dev.wechat.hsc.philips.com.cn/oss/presignedurl/skincubator-miniapp', {
-//     query: {
-//       'objectPath' : '11111.jpg',
-//       'action' : 'get'
-//     },
-//     headers: {
-//       accept: 'application/json'
-//     }  
-//   });
-//   console.log(JSON.stringify(result));
-// }
-
-var arr = [];
+var SignDatas = require('../../utils/signature-ali.js').SignDatas;
 
 Component({
 
@@ -69,21 +46,73 @@ Component({
 
   methods: {  
 
+    uploadImageToOSSCredential : function(tempFilePaths, url) {
+      console.log('uploadImageToOSSCredential tempFilePaths', tempFilePaths);
+      console.log('uploadImageToOSSCredential url', url);
+      var fs = wx.getFileSystemManager();
+      fs.readFile({
+        filePath: tempFilePaths,
+        success(res) {
+          console.log('readFile success res', res);
+          wx.request({
+            url: url,
+            method: 'PUT',
+            header: {
+              'content-type': 'application/octet-stream'
+            },
+            data: res.data,
+            success: (res) => {
+              console.log('uploadImageToOSSCredential success : ', res);
+            },
+            fail: (res) => {
+              console.log('uploadImageToOSSCredential fail : ', res);
+            }
+          })
+        },
+        fail(res) {
+          console.log('readFile fail res', res);
+        }
+      })
+    },
+
     uploadImg : function(tempFilePaths) {
       console.log('tempFilePaths', tempFilePaths);
-      // getByOssCredential().catch(
-      //   (err) => {
-      //     console.error(err);
-      //   }
-      // );
-
-      // cameraService.getReportId(tempFilePaths).then(res => {
-      //   console.log('res = ', res);
-      //   // preference.reportId = res
-      //   // wx.redirectTo({
-      //   //   url: '/pages/assessment/hydration/hydration?nextPreference=' + encodeURIComponent(JSON.stringify(preference))
-      //   // })   
-      // })
+      var that = this;
+      var urlHost = app.globalData.ossHostUrl;
+      var urlPath = app.globalData.ossPresignedUrl;
+      var requestData = {
+        'objectPath':'11111.jpg',
+        'action':'put'
+      };
+      var signDatas = new SignDatas(urlPath, requestData);
+      var apiUrl = urlHost + urlPath;
+      wx.request({
+        url: apiUrl,
+        method:'GET',
+        data: requestData,
+        header: {
+          'Date': signDatas.date,
+          'Content-MD5': signDatas.md5,
+          'X-Ca-Nonce': signDatas.nonce,
+          'X-Ca-Key': signDatas.appKey,
+          'X-Ca-Signature': signDatas.signature,
+          'X-Ca-SignatureMethod': signDatas.signatureMethod,
+          'X-Ca-Signature-Headers': signDatas.signatureHeaders,
+          'Content-Type': signDatas.contentType,
+          'Accept': signDatas.accept
+        },
+        success(res) {
+          console.log('uploadImg success res.data', res.data);
+          var content = res.data['content'];
+          if (content) {
+            var url = content['url'];
+            that.uploadImageToOSSCredential(tempFilePaths, url);
+          }
+        },
+        fail(res) {
+          console.log('uploadImg fail res', res.data);
+        }
+      });
     },
 
     chooseImage : function(byCamera) {
@@ -94,10 +123,10 @@ Component({
         sourceType: byCamera ? ['camera'] : ['album'],
         success (res) {
           // tempFilePath可以作为img标签的src属性显示图片
-          const tempFilePaths = res.tempFilePaths;
+          const tempFilePaths = res.tempFilePaths[0];
           var photoValue = 'params.profilePhoto.photoValue';
           that.setData({[photoValue]: tempFilePaths});
-          // upload oss
+          // upload to oss
           that.uploadImg(tempFilePaths);
         }
       })   

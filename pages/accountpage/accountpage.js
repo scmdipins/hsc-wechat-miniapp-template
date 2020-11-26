@@ -1,4 +1,4 @@
-// pages/account/account.js
+// pages/accountpage/accountpage.js
 
 var accountPageConsts = require("../../datas/accountpage.data.js")
 
