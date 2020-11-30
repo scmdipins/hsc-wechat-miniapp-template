@@ -15,8 +15,9 @@ var registerModal = {
       "refusedWechatLoginPath":"/pages/login/login",
       "phoneLoginpath":"/pages/accountAndSecurity/accountAndSecurity",
       "showModalTitle":"用户协议与隐私政策",
-      "showModalContent":"我们深知隐私对您的重要性，如果又任何问题，请随时联系我们",
+      "showModalContent":"我们深知隐私对您的重要性,为了更全面地呈现我们收集和使用您个人息的相关情况,我们根据最新法律法规的要求，对隐私政策和用户协议进行了详细的修订。当您点击【同意】即表示您已充分阅读、理解并接受更新过的《隐私政策》和《用户协议》的全部内容。请花一些时间熟悉我们的隐私政策,如果您有任何问题,请随时联系我们。",
       "showModalNotAgreement":"/pages/privacy/privacy",
+      "time":60
     }
 
 module.exports = {

@@ -2,6 +2,7 @@
 
 var mypageData = require("../../datas/mypage.data.js")
 const app = getApp();
+var xca = require('../../utils/x-ca-signature.js');
 
 Page({
 
@@ -26,6 +27,7 @@ Page({
   
   onLoad: function () {
     this.setData({tipValue: getApp().globalData.phone});
+    this.setData({txtValue: getApp().globalData.name ? getApp().globalData.name : '未登录'});
   },
 
   fakeLogin: function() {

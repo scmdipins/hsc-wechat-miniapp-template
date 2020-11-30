@@ -1,5 +1,6 @@
 // pages/accountsecurity/phone/phone.js
 const smsService = require('../../../services/smsService.js');
+const hsc = getApp().hsc
 
 Page({
 
@@ -77,14 +78,26 @@ Page({
   },
 
   getVerificationCode: function(e) {
+   
     const phone = this.data.phoneNum;
     const data = {
       'phone': phone
     }
-    smsService.sendSms(data);
-    wx.navigateTo({
-      url: '/pages/inputVerifyCode/inputVerifyCode'
+    const obj = {
+      url: 'hsc/template/sms/send',
+      method: 'POST',
+      data: data
+    }
+    hsc.request(obj).then(res => {
+      if(res.statusCode == 200){
+        wx.navigateTo({
+          url: '/pages/inputVerifyCode/inputVerifyCode?key='+ res.data.key+ '&navigePage=/pages/mypage/mypage&apiUrl=hsc/template/user/phone&phone='+phone,
+        })
+      }
+    }).catch(res => {
+      console.log(res.errMsg)
     })
+
   }
 
 })

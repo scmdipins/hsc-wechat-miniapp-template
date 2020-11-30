@@ -3,14 +3,11 @@
     "pages/home/home",
     "pages/accountsecurity/accountsecurity",
     "pages/inputVerifyCode/inputVerifyCode",
-
     "pages/login/login",
-
     "pages/accountsecurity/logoff/logoff",
     "pages/accountsecurity/mail/mail",
     "pages/accountsecurity/phone/phone",
     "pages/accountsecurity/password/password",
-  
     "pages/root/root",
     "pages/logs/logs",
     "pages/my404/my404",
@@ -20,7 +17,6 @@
     "pages/privacypolicypage/privacypolicypage",
     "pages/useragreementpage/useragreementpage",
     "pages/datacollectionpage/datacollectionpage"
-    
   ],
   "tabBar": {
     "custom": true,

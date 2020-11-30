@@ -113,8 +113,18 @@ Page({
     hsc.request(obj).then(res => {
       if(res.statusCode == 200){
         getApp().globalData.isLogin = false;
+        getApp().globalData.phone = null;
+        getApp().globalData.name = null;
+        getApp().globalData.mail = null;
+        getApp().globalData.image = null;
+        
         wx.switchTab({
-          url: '/pages/home/home',
+          url: '/pages/mypage/mypage',
+          success: function (e) {
+            var page = getCurrentPages().pop();
+            if (page == undefined || page == null) return;
+            page.onLoad();
+          }
         })
       }
     }).catch(res => {

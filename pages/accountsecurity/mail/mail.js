@@ -90,8 +90,9 @@ Page({
     }
     hsc.request(obj).then(res => {
       if(res.statusCode == 200){
-        wx.navigateTo({
-          url: '/pages/accountsecurity/accountsecurity',
+        getApp().globalData.email = res.data.email
+        wx.switchTab({
+          url: '/pages/mypage/mypage',
         })
       }
     }).catch(res => {
@@ -100,8 +101,8 @@ Page({
   },
 
   skipTap: function(e){
-    wx.navigateTo({
-      url: '/pages/accountsecurity/accountsecurity',
+    wx.switchTab({
+      url: '/pages/mypage/mypage',
     })
   }
 })

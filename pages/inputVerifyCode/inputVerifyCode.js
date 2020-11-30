@@ -9,7 +9,8 @@ Page({
     verifyModal: null,
     navigePage: null,
     verificationKey: null,
-    apiUrl: null
+    apiUrl: null,
+    phone: null
   },
 
   /**
@@ -25,6 +26,10 @@ Page({
 
     if(options.apiUrl){
       this.setData({ apiUrl: options.apiUrl });
+    }
+
+    if(options.phone){
+      this.setData({ phone: options.phone });
     }
 
     this.setData({

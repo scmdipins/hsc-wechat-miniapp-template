@@ -19,6 +19,10 @@ Component({
     apiUrl: {
       type: String,
       value: null
+    },
+    phone: {
+      type: String,
+      value: null
     }
   },
 
@@ -82,6 +86,21 @@ Component({
         countingDown: true
       })
 
+        const phoneInfo= {
+          phone: this.data.phone ? this.data.phone: null
+        }
+        const obj = {
+          url: 'hsc/template/sms/send',
+          method: 'POST',
+          data: phoneInfo
+        }
+        hsc.request(obj).then(res => {
+          if(res.statusCode == 200){
+            this.setData({verificationKey: res.data.key});
+          }
+        }).catch(res => {
+          console.log(res.errMsg)
+        })
       this.startCount()
 
     },
@@ -99,14 +118,28 @@ Component({
         if(res.statusCode == 200){
           if(this.data.apiUrl == 'hsc/template/user/activation'){
             getApp().globalData.isLogin = true;
-            getApp().globalData.phone = phone;
+            getApp().globalData.phone = this.data.phone;
+            getApp().globalData.name = res.data.name;
           }
+
+          if(this.data.apiUrl == 'hsc/template/user/phone'){
+            getApp().globalData.phone = res.data.phone;
+          }
+
           // this.triggerEvent('callBack')
           wx.navigateTo({
             url: this.data.navigePage.trim(),
           }).catch(
+            // wx.switchTab({
+            //   url: this.data.navigePage.trim(),
+            // })
             wx.switchTab({
               url: this.data.navigePage.trim(),
+              success: function (e) {
+                var page = getCurrentPages().pop();
+                if (page == undefined || page == null) return;
+                page.onLoad();
+              }
             })
           )
         }

@@ -76,9 +76,9 @@ Component({
       }
     },
     getCode: function () {
-     
+        const phone = this.data.phoneNum;
         const phoneInfo= {
-          phone: this.data.phoneNum
+          phone: phone
         }
         const obj = {
           url: 'hsc/template/user',
@@ -88,7 +88,7 @@ Component({
         hsc.request(obj).then(res => {
           if(res.statusCode == 200){
             wx.navigateTo({
-              url: this.data.phoneLoginModal.inputVerifyCodePath+'?key='+res.data.key + '&navigePage=../../pages/home/home&apiUrl=hsc/template/user/activation',
+              url: this.data.phoneLoginModal.inputVerifyCodePath+'?key='+res.data.key + '&navigePage=/pages/mypage/mypage&apiUrl=hsc/template/user/activation&phone='+phone,
             })
           }
         }).catch(res => {

@@ -62,9 +62,18 @@ Component({
         hsc.request(obj).then(res => {
           if(res.statusCode == 200){
             globalData.phone = res.data.phone;
+            globalData.name = res.data.name;
             globalData.isLogin = true;
+            // wx.switchTab({
+            //   url: '../../pages/home/home',
+            // })
             wx.switchTab({
-              url: '../../pages/home/home',
+              url: '/pages/mypage/mypage',
+              success: function (e) {
+                var page = getCurrentPages().pop();
+                if (page == undefined || page == null) return;
+                page.onLoad();
+              }
             })
           }
         }).catch(res => {

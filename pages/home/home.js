@@ -22,8 +22,9 @@ Page({
     hsc.request(obj).then(res => {
       if(res.statusCode == 200){
         globalData.phone = res.data.phone;
-        globalData.name = null;
-        globalData.mail = null;
+        globalData.name = res.data.name;
+        globalData.email = res.data.email;
+        globalData.image = res.data.image;
         globalData.isLogin = true;
       }
     }).catch(res => {

@@ -1,5 +1,6 @@
 // components/phAccountPage/phAccountPage.js
 const app = getApp()
+const hsc = getApp().hsc
 var SignDatas = require('../../utils/signature-ali.js').SignDatas;
 
 Component({
@@ -159,7 +160,26 @@ Component({
       console.log('[phAccountPage] onUserNameFocus, e = ', e);
     },    
     onUserNameBlur : function (e) {
+      console.log(e.detail.value);
       console.log('[phAccountPage] onUserNameBlur, e = ', e);
+      const params = {
+        name: e.detail.value
+      }
+      const obj = {
+        url: 'hsc/template/user/name',
+        method: 'POST',
+        data: params
+      }
+      hsc.request(obj).then(res => {
+        if(res.statusCode == 200){
+          getApp().globalData.name= res.data.name;
+          wx.switchTab({
+            url: '/pages/mypage/mypage',
+          })
+        }
+      }).catch(res => {
+        console.log(res.errMsg)
+      })
     },     
 
   }  

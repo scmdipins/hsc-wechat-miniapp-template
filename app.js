@@ -1,7 +1,6 @@
 //app.js
 var hsc = require('utils/hsc-wx-sdk.js')
 var track = require('utils/hsc-wx-sdk-user.js')
-// var track = require('utils/http.js')
 App({
   onLaunch: function () {
   
@@ -29,7 +28,8 @@ App({
   globalData: {
     phone: null,
     name: null,
-    mail: null,
+    email: null,
+    image: null,
     isLogin: false,
     userInfo: null,
     ossAssetsUrl: 'https://skincubator-miniapp-prod-public.oss-cn-shanghai.aliyuncs.com/assets/',

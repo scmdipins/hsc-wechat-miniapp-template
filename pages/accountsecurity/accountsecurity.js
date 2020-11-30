@@ -1,4 +1,5 @@
 // pages/accountsecurity.js
+const globalData = getApp().globalData
 Page({
 
   /**
@@ -8,7 +9,7 @@ Page({
     cardLines:[
       {
         "itemName":"手机号码",
-        "itemStatus":"未设置",
+        "itemStatus": globalData.phone ? globalData.phone : "未设置",
         "naviPage": "/pages/accountsecurity/phone/phone"
       },
       {
@@ -19,7 +20,7 @@ Page({
       },
       {
         "itemName":"修改邮箱",
-        "itemStatus":"未设置",
+        "itemStatus": globalData.email ? globalData.email: "未设置",
         "naviPage": "/pages/inputVerifyCode/inputVerifyCode?navigePage=/pages/accountsecurity/mail/mail",
         "sendSms": true
       }
@@ -36,7 +37,26 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-
+    const data = [
+      {
+        "itemName":"手机号码",
+        "itemStatus": globalData.phone ? globalData.phone : "未设置",
+        "naviPage": "/pages/accountsecurity/phone/phone"
+      },
+      {
+        "itemName":"修改登录密码",
+        "itemStatus":"未设置",
+        "naviPage": "/pages/inputVerifyCode/inputVerifyCode?navigePage=/pages/accountsecurity/password/password",
+        "sendSms": true
+      },
+      {
+        "itemName":"修改邮箱",
+        "itemStatus": globalData.email ? globalData.email: "未设置",
+        "naviPage": "/pages/inputVerifyCode/inputVerifyCode?navigePage=/pages/accountsecurity/mail/mail",
+        "sendSms": true
+      }
+    ]
+    this.setData({cardLines: data});
   },
 
   /**

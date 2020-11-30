@@ -2,7 +2,7 @@
 <view class="page-content">
 
 	<view class="input">
-		<verifyCode-modal id="verifyModal" verifyModal="{{verifyModal}}" navigePage="{{navigePage}} " verificationKey="{{ verificationKey }}" apiUrl="{{ apiUrl }}"></verifyCode-modal>
+		<verifyCode-modal id="verifyModal" verifyModal="{{verifyModal}}" navigePage="{{navigePage}} " verificationKey="{{ verificationKey }}" apiUrl="{{ apiUrl }}" phone="{{ phone }}"></verifyCode-modal>
 	</view>
 
 
