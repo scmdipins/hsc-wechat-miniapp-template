@@ -9,7 +9,6 @@ Component({
   },
 
   attached: function () {
-    console.log('[phLine] attached, this.dataset.params = ', this.dataset.params);
     if (!this.dataset.params) {
       return;
     }    

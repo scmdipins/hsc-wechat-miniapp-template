@@ -11,7 +11,6 @@ Component({
   },
 
   attached: function () {
-    console.log('[phLabelItem] attached, this.dataset.params = ', this.dataset.params);
     if (!this.dataset.params) {
       return;
     }        

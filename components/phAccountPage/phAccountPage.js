@@ -1,7 +1,7 @@
 // components/phAccountPage/phAccountPage.js
-const app = getApp()
-const hsc = getApp().hsc
-var SignDatas = require('../../utils/signature-ali.js').SignDatas;
+const hsc = getApp().hsc;
+const globalData = getApp().globalData;
+const oss = require('../../utils/oss-credential.js');
 
 Component({
 
@@ -41,79 +41,68 @@ Component({
     }
     if (jo.userName.maxLength == null) {
       jo.userName.maxLength = 50;
-    }    
+    }
+    // change user name if setted
+    if (globalData.name != null) {
+      jo.userName.inputValue = globalData.name;
+    }
     this.setData({params : jo});
+    // change photo if needed
+    if (globalData.image != null) {
+      oss.getRealImageUrlFromOSS(globalData.image).then(url => {
+        var photoValue = 'params.profilePhoto.photoValue';
+        this.setData({[photoValue]: url});        
+      }).catch(res => {
+        console.log('Fail getRealImageUrlFromOSS = ' + res);
+      })
+    }
   },
 
   methods: {  
 
-    uploadImageToOSSCredential : function(tempFilePaths, url) {
-      console.log('uploadImageToOSSCredential tempFilePaths', tempFilePaths);
-      console.log('uploadImageToOSSCredential url', url);
-      var fs = wx.getFileSystemManager();
-      fs.readFile({
-        filePath: tempFilePaths,
-        success(res) {
-          console.log('readFile success res', res);
-          wx.request({
-            url: url,
-            method: 'PUT',
-            header: {
-              'content-type': 'application/octet-stream'
-            },
-            data: res.data,
-            success: (res) => {
-              console.log('uploadImageToOSSCredential success : ', res);
-            },
-            fail: (res) => {
-              console.log('uploadImageToOSSCredential fail : ', res);
-            }
+    saveImageToDB : function(imageUrl) {
+      const obj = {
+        url: 'hsc/template/user/image',
+        method: 'POST',
+        data: {image: imageUrl}
+      }
+      hsc.request(obj).then(res => {
+        if(res.statusCode == 200){
+          globalData.image = imageUrl;
+          wx.showToast({
+            title: '成功',
+            icon: 'succes',
+            duration: 1000,
+            mask:true
           })
-        },
-        fail(res) {
-          console.log('readFile fail res', res);
+        //   wx.navigateTo({
+        //     url: '/pages/accountsecurity/accountsecurity',
+        //   })
         }
+      }).catch(res => {
+        console.log(res.errMsg)
       })
     },
 
-    uploadImg : function(tempFilePaths) {
-      console.log('tempFilePaths', tempFilePaths);
-      var that = this;
-      var urlHost = app.globalData.ossHostUrl;
-      var urlPath = app.globalData.ossPresignedUrl;
-      var requestData = {
-        'objectPath':'11111.jpg',
-        'action':'put'
-      };
-      var signDatas = new SignDatas(urlPath, requestData);
-      var apiUrl = urlHost + urlPath;
-      wx.request({
-        url: apiUrl,
-        method:'GET',
-        data: requestData,
-        header: {
-          'Date': signDatas.date,
-          'Content-MD5': signDatas.md5,
-          'X-Ca-Nonce': signDatas.nonce,
-          'X-Ca-Key': signDatas.appKey,
-          'X-Ca-Signature': signDatas.signature,
-          'X-Ca-SignatureMethod': signDatas.signatureMethod,
-          'X-Ca-Signature-Headers': signDatas.signatureHeaders,
-          'Content-Type': signDatas.contentType,
-          'Accept': signDatas.accept
-        },
-        success(res) {
-          console.log('uploadImg success res.data', res.data);
-          var content = res.data['content'];
-          if (content) {
-            var url = content['url'];
-            that.uploadImageToOSSCredential(tempFilePaths, url);
-          }
-        },
-        fail(res) {
-          console.log('uploadImg fail res', res.data);
+    saveNameToDB : function(newName) {
+      const obj = {
+        url: 'hsc/template/user/name',
+        method: 'POST',
+        data: {name : newName}
+      }
+      hsc.request(obj).then(res => {
+        if(res.statusCode == 200){
+          globalData.name = newName;
+          wx.showToast({
+            title: '成功',
+            icon: 'succes',
+            duration: 1000,
+            mask:true
+          })
         }
-      });
+      }).catch(res => {
+        console.log(res.errMsg)
+      })
     },
 
     chooseImage : function(byCamera) {
@@ -124,11 +113,17 @@ Component({
         sourceType: byCamera ? ['camera'] : ['album'],
         success (res) {
           // tempFilePath可以作为img标签的src属性显示图片
-          const tempFilePaths = res.tempFilePaths[0];
+          const tempFilePath = res.tempFilePaths[0];
           var photoValue = 'params.profilePhoto.photoValue';
-          that.setData({[photoValue]: tempFilePaths});
-          // upload to oss
-          that.uploadImg(tempFilePaths);
+          that.setData({[photoValue]: tempFilePath}); // change immediately, but will use real url after success of upload
+          oss.uploadImageFileToOSS(tempFilePath).then(res => {
+            // var imageFile = res['imageFile'];
+            // var url = res['url'];
+            var imageUrl = res['imageUrl'];
+            that.saveImageToDB(imageUrl);
+          }).catch(res => {
+            console.log('Fail uploadImageToOSSCredential = ' + res);
+          })
         }
       })   
     },
@@ -153,34 +148,24 @@ Component({
     error(e) {
       console.log(e.detail)
     },    
+
     onTap : function () {
       console.log('[phAccountPage] onTap, this.data.params = ', this.data.params);
     },
+
     onUserNameFocus : function (e) {
       console.log('[phAccountPage] onUserNameFocus, e = ', e);
-    },    
+    },   
+
     onUserNameBlur : function (e) {
-      console.log(e.detail.value);
-      console.log('[phAccountPage] onUserNameBlur, e = ', e);
-      const params = {
-        name: e.detail.value
+      // console.log('[phAccountPage] onUserNameBlur, e = ', e);
+      var oldName = globalData.name;
+      var newName = e.detail.value;
+      if ((newName != null) && (newName != oldName)) {
+        console.log('[phAccountPage] change name', oldName, ' -> ', newName);
+        this.saveNameToDB(newName);
       }
-      const obj = {
-        url: 'hsc/template/user/name',
-        method: 'POST',
-        data: params
-      }
-      hsc.request(obj).then(res => {
-        if(res.statusCode == 200){
-          getApp().globalData.name= res.data.name;
-          wx.switchTab({
-            url: '/pages/mypage/mypage',
-          })
-        }
-      }).catch(res => {
-        console.log(res.errMsg)
-      })
-    },     
+    },  
 
   }  
 })

@@ -1,8 +1,9 @@
 // pages/mypage.js
 
-var mypageData = require("../../datas/mypage.data.js")
-const app = getApp();
-var xca = require('../../utils/x-ca-signature.js');
+const mypageData = require("../../datas/mypage.data.js")
+const globalData = getApp().globalData;
+const oss = require('../../utils/oss-credential.js');
+var lastImageurl;
 
 Page({
 
@@ -23,18 +24,20 @@ Page({
         selected: 1
       })
     }
+    if ((globalData.name != null) && (globalData.name != this.data.txtValue)) {
+      this.setData({txtValue : globalData.name});
+    }    
+    if ((globalData.phone != null) && (globalData.phone != this.data.tipValue)) {
+      this.setData({tipValue: globalData.phone});
+    }
+    if ((globalData.image != null) && (globalData.image != lastImageurl)) {
+      oss.getRealImageUrlFromOSS(globalData.image).then(res => {
+        this.setData({imgValue: res});
+        lastImageurl = res;
+      }).catch(res => {
+        console.log('Fail getRealImageUrlFromOSS = ' + res);
+      });
+    }
   }, 
-  
-  onLoad: function () {
-    this.setData({tipValue: getApp().globalData.phone});
-    this.setData({txtValue: getApp().globalData.name ? getApp().globalData.name : '未登录'});
-  },
-
-  fakeLogin: function() {
-    let bLogin = app.globalData.isLogin;
-    app.globalData.isLogin = !bLogin;
-    console.log('fake login ', bLogin, ' -> ', app.globalData.isLogin);
-  },
-
 
 })
