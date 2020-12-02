@@ -1,0 +1,3 @@
+<!--components/phLine/phLine.wxml-->
+
+<view class="phline-body" style="background-color:{{params.colorValue}} ; height:{{params.heightValue}}" bindtap="onTap" />

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "账号与安全",
+  "usingComponents": {
+    "cardLine" : "/components/cardLine/cardLine"
+  }
+}

@@ -1,0 +1,2 @@
+<!--pages/datacollectionpage/datacollectionpage.wxml-->
+<phDataCollectionPage data-params="{{DataCollectionPageConsts}}" />

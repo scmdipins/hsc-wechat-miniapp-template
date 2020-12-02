@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "phLoginPanel" : "/components/phLoginPanel/phLoginPanel",
+    "phLabelGroup" : "/components/phLabelGroup/phLabelGroup",    
+    "phLine" : "/components/phLine/phLine"   
+  }
+}

@@ -1,0 +1,13 @@
+<!--components/cardLine/cardLine.wxml-->
+<view class="line-content" wx:if="{{ itemName }}" bindtap="navigateTap" data-url="{{ naviPage }}">
+  <view class="line-field">
+    <text class="line-field-text">{{ itemName }}</text>
+  </view>
+  <view class="line-desc">
+    <text class="line-desc-text">{{ itemStatus}}</text>
+  </view>
+  <view class="line-img">
+    <text class="line-img-text">></text>
+    <!-- <image src="/images/right.png"></image> -->
+  </view>
+</view>

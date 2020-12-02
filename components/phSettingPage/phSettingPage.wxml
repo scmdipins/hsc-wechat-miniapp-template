@@ -1,0 +1,15 @@
+<!--components/phSettingPage/phSettingPage.wxml-->
+
+<view class="body-v" bindtap="onTap">
+  <block wx:for="{{ params.labelGroup }}" wx:for-item="labelItem" wx:key="index">
+    <phLabelItem data-params="{{labelItem}}">
+      <view>
+        <text class="phsettingpage-txt" style="color:{{labelItem.versionColor}}">{{labelItem.versionValue}}</text>
+        <text wx:if="{{labelItem.hasUrlMark}}" class="phsettingpage-greatthan" decode="{{true}}" style="color:{{labelItem.versionColor}}">&gt;</text>
+      </view>
+    </phLabelItem>
+    <phLine />
+  </block>
+</view>
+
+<phButton class="phsettingpage-btn" data-params="{{params.logoutButton}}" />

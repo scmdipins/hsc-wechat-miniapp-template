@@ -1,0 +1,119 @@
+/* pages/accountsecurity/logoff/logoff.wxss */
+.off-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.off-right {
+  margin:3.9vh 6.4vw 0 6.67vw;
+}
+
+.off-right-title {
+    margin: 0 auto 0.9vh 0;
+    font-family: PingFangSC;
+    font-size: 14px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #383838;
+}
+
+.off-right-content {
+    /* width: 306px;
+    height: 140px; */
+    height: 21vh;
+    /* margin: 6px 44px 1px 25px; */
+    font-family: PingFangSC;
+    font-size: 12px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    color: #383838;
+}
+
+.off-right-item {
+  display: flex;
+  flex-direction: row;
+}
+
+.right-index {
+  margin:0 10px;
+}
+
+.off-condition {
+  margin:0.5vh 6.4vw 0 6.67vw;
+}
+
+.off-condition-title {
+  margin: 0 auto 0.9vh 0;
+  font-family: PingFangSC;
+  font-size: 14px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #383838;
+}
+
+.off-condition-content {
+      /* width: 306px;
+    height: 140px; */
+    height: 21vh;
+    /* margin: 6px 44px 1px 25px; */
+    font-family: PingFangSC;
+    font-size: 12px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    color: #383838;
+}
+
+.off-rule {
+    /* width: 326px;
+    height: 61px; */
+    margin:2vh 6.4vw 0 6.67vw;
+    font-family: PingFangSC;
+    font-size: 12px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #383838;
+   /* .text-style-1 {
+    color: #5a9ada;
+  } */
+}
+
+.off-btn-block {
+  margin:10.94vh 4.27vw 0 4.53vw;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-radius: 4rpx;
+  background-color: #0074bd;
+}
+
+.summit-btn {
+  /* height: 44rpx; */
+  /* margin: 18rpx 32rpx 16rpx 32rpx; */
+  width: unset !important;
+  transform: rotate(-360deg);
+  font-family: CentraleSans;
+  font-size: 32rpx;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: inherit;
+  letter-spacing: normal;
+  text-align: center;
+  padding: unset !important;
+  background-color: unset;
+  color: #ffffff;
+}
