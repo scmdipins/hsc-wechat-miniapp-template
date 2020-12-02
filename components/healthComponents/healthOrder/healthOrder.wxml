@@ -1,0 +1,62 @@
+<view class="order-page">
+
+	<view class="order-content">
+
+		<view class="infomation">
+			<view class="before">{{healthOrderModal.prefixName1}}</view>
+			<view class="after">{{healthOrderModal.itemsName}}</view>
+		</view>
+		<view class="split-line"></view>
+
+		<view class="infomation">
+			<view class="before">{{healthOrderModal.prefixName2}}</view>
+			<view class="after">{{healthOrderModal.description2}}</view>
+		</view>
+		<view class="split-line"></view>
+
+		<view class="infomation">
+			<view class="before">{{healthOrderModal.prefixName3}}</view>
+			<view class="after">{{healthOrderModal.description3}}</view>
+		</view>
+		<view class="split-line"></view>
+
+		<view class="infomation">
+			<view class="before">{{healthOrderModal.prefixName4}}</view>
+			<view class="after">{{healthOrderModal.description4}}</view>
+		</view>
+		<view class="split-line"></view>
+
+		<view class="infomation">
+			<view class="before">{{healthOrderModal.prefixName5}}</view>
+			<view class="after">{{healthOrderModal.description5}}</view>
+		</view>
+		<view class="split-line"></view>
+
+		<view class="infomation">
+			<view class="before">{{healthOrderModal.prefixName6}}</view>
+			<view class="after">{{healthOrderModal.description6}}</view>
+		</view>
+		<view class="split-line"></view>
+
+		<view class="infomation">
+			<view class="before">{{healthOrderModal.prefixName7}}</view>
+			<view class="after">{{healthOrderModal.description7}}</view>
+		</view>
+		<view class="split-line"></view>
+	</view>
+
+
+
+
+
+	<view class="btn-accept" style="background-color:{{healthOrderModal.acceptBtnColor}};">
+		<view class="order-accept" style="color:{{healthOrderModal.btnTextColor}};">
+			{{healthOrderModal.acceptBtnText}}</view>
+	</view>
+
+
+	<view class="btn-refused">
+		<view class="order-refused" style="color:{{healthOrderModal.refusedTextColor}};">{{healthOrderModal.refusedBtnText}}</view>
+	</view>
+
+</view>
