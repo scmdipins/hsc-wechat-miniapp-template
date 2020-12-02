@@ -1,0 +1,65 @@
+/* components/phSettingPage/phSettingPage.wxss */
+
+.phsettingpage-greatthan {
+  width: 36rpx;
+  height: 36rpx;
+  font-family: dls-icons-24;
+  font-size: 36rpx;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #c4c4c4;
+  margin-left: 20rpx;
+}
+
+.phsettingpage-txt {
+  font-family: PingFangSC;
+  font-size: 28rpx;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #999999;
+}
+
+.phsettingpage-btn {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  margin-bottom: 160rpx;
+}
+
+.body-h {
+  display: flex;    
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+}
+
+.body-v {
+  display: flex;    
+  flex-direction: column;
+  align-items: left;
+  text-align: left;  
+  justify-content: flex-start; 
+}
+
+.view-h {
+  display: flex;    
+  flex-direction: row;
+  align-items: left;
+  text-align: left;   
+  justify-content: center;
+}
+
+.view-v {
+  display: flex;    
+  flex-direction: column;
+  align-items: left;
+  text-align: left;
+  justify-content: center;  
+}

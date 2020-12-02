@@ -1,0 +1,36 @@
+<!--components/register/register.wxml-->
+<view class="page-body">
+
+	<view class="images-content">
+		<image class="images-icon" src="{{registerModal.Topimage}}"></image>
+	</view>
+
+	<view class="button-content">
+		<button class="button-modal" style="width:329px;height:40px" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">
+			<view class="button-body" style="background-color:{{registerModal.loginColour}};">
+				<image class="icon-image" src="{{registerModal.loginImages}}"></image>
+				<view class="button-text">{{registerModal.loginText}}</view>
+			</view>
+		</button>
+	</view>
+
+
+	<view class="login-phone-body" hidden="{{registerModal.isDisablePhoneLogin?true:false}}">
+		<view class="show-button">
+
+		</view>
+		<view class="login-phone-text" style="color:{{registerModal.phoneLoginColour}};" bindtap="loginByPhoneNumber">{{registerModal.phoneLoginText}}</view>
+	</view>
+
+
+	<view class="privacy-body">
+		<view class="privacy-content">
+			<view class="privacy-text">{{registerModal.copyText}}
+				<view class="privacy-userAgreement" bindtap="jumpUserAgreement">{{registerModal.userAgreement}}</view>
+				<text>和</text>
+				<view class="privacy-policy" bindtap="jumpPrivacyPolicy">{{registerModal.privacyPolicy}}</view>
+			</view>
+		</view>
+	</view>
+
+</view>

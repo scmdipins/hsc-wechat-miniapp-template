@@ -1,0 +1,85 @@
+/* components/phLoginPanel/phLoginPanel.wxss */
+
+.phloginpanel-body {
+  height: 162rpx;
+  margin-left: 42rpx;
+  margin-right: 42rpx;
+}
+
+.phloginpanel-img {
+  min-width: 96rpx;
+  max-width: 96rpx;
+  min-height: 96rpx;
+  max-height: 96rpx;
+  margin: 16rpx 36rpx;
+}
+
+.phloginpanel-txt {
+  height: 56rpx;
+  font-family: PingFangSC;
+  font-size: 40rpx;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #000000;
+}
+
+.phloginpanel-tip {
+  height: 28rpx;
+  font-family: PingFangSC;
+  font-size: 20rpx;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #929292;
+  margin-top: 10rpx;
+}
+
+.phloginpanel-greatthan {
+  width: 48rpx;
+  height: 48rpx;
+  font-family: dls-icons-24;
+  font-size: 48rpx;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #5a9ada;
+}
+
+.body-h {
+  display: flex;    
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+}
+
+.body-v {
+  display: flex;    
+  flex-direction: column;
+  align-items: left;
+  text-align: left;  
+  justify-content: flex-start; 
+}
+
+.view-h {
+  display: flex;    
+  flex-direction: row;
+  align-items: left;
+  text-align: left;
+  justify-content: center;
+}
+
+.view-v {
+  display: flex;    
+  flex-direction: column;
+  align-items: left;
+  text-align: left;
+  justify-content: center;
+}

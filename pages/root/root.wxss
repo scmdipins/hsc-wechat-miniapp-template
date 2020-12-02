@@ -1,0 +1,74 @@
+.root {
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+.container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom:106rpx;
+  overflow-y: hidden;
+}
+
+.tabBar {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 106rpx;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  box-shadow: 0 2rpx 8rpx 0 rgba(0, 0, 0, 0.2);
+  background-color: #ffffff;
+}
+
+.tabBar_item {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+}
+
+.tabBar_item navigator{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.tabBar_icon {
+  width: 44rpx;
+  height: 44rpx;
+}
+
+.tabBar_title {
+  font-size: 24rpx;
+  color: #9b9b9b;
+}
+
+.tabBar_title_selected {
+color: #98b234;
+}
+
+.tabBar_actionsheet_icon {
+  width: 74rpx;
+  height: 74rpx;
+}
+
+.tabBar_add_button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 20%;
+}

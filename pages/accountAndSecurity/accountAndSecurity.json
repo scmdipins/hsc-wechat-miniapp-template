@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+      "phone-login":"/components/phoneNumberLogin/phoneNumberLogin"
+  },
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#337FBF",
+  "navigationBarTitleText": "账号和安全 ",
+  "navigationBarTextStyle": "white"
+}

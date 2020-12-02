@@ -1,0 +1,58 @@
+/* components/phLabelItem/phLabelItem.wxss */
+
+.phlabelitem-body {
+  height: 90rpx;
+  margin-left: 42rpx;
+  margin-right: 42rpx;
+}
+
+.phlabelitem-img {
+  min-width: 40rpx;
+  max-width: 40rpx;
+  min-height: 40rpx;
+  max-height: 40rpx; 
+  margin-right: 44rpx;
+}
+
+.phlabelitem-txt {
+  font-family: PingFangSC;
+  font-size: 28rpx;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.82;
+  letter-spacing: normal;
+  color: #000000;
+}
+
+.body-h {
+  display: flex;    
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+}
+
+.body-v {
+  display: flex;    
+  flex-direction: column;
+  align-items: left;
+  text-align: left;  
+  justify-content: flex-start; 
+}
+
+.view-h {
+  display: flex;    
+  flex-direction: row;
+  align-items: left;
+  text-align: left; 
+  justify-content: center;  
+}
+
+.view-v {
+  display: flex;    
+  flex-direction: column;
+  align-items: left;
+  text-align: left;  
+  justify-content: center;
+}

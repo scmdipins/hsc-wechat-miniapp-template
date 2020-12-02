@@ -1,0 +1,26 @@
+/* components/phUserAgreementPage/phUserAgreementPage.wxss */
+
+.txt1 {
+  height: 44rpx;
+  font-family: PingFangSC;
+  font-size: 28rpx;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #383838; 
+  margin: 50rpx;
+}
+
+.txt2 {
+  font-family: PingFangSC;
+  font-size: 24rpx;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  color: #383838;
+  margin: 50rpx;
+}

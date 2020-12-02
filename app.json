@@ -1,0 +1,50 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/accountsecurity/accountsecurity",
+    "pages/inputVerifyCode/inputVerifyCode",
+    "pages/login/login",
+    "pages/accountsecurity/logoff/logoff",
+    "pages/accountsecurity/mail/mail",
+    "pages/accountsecurity/phone/phone",
+    "pages/accountsecurity/password/password",
+    "pages/root/root",
+    "pages/logs/logs",
+    "pages/my404/my404",
+    "pages/mypage/mypage",
+    "pages/settingpage/settingpage",
+    "pages/accountpage/accountpage",
+    "pages/privacypolicypage/privacypolicypage",
+    "pages/useragreementpage/useragreementpage",
+    "pages/datacollectionpage/datacollectionpage"
+  ],
+  "tabBar": {
+    "custom": true,
+    "color": "#c4c4c4",
+    "selectedColor": "#5a9ada",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "text": "Home",
+        "pagePath": "pages/home/home",
+        "iconPath": "images/homehui.png",
+        "selectedIconPath": "images/home.png"
+      },
+      {
+        "text": "My2",
+        "pagePath": "pages/mypage/mypage",
+        "iconPath": "images/my.png",
+        "selectedIconPath": "images/myblue.png"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#337FBF",
+    "navigationBarTitleText": "Philips Home",
+    "navigationBarTextStyle": "white"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
