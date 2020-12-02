@@ -1,6 +1,0 @@
-<!--components/phButton/phButton.wxml-->
-<view class="body-h phbutton-body" bindtap="onTap">
-  <button class="phbutton-txt" style="color:{{params.txtColor}};background-color:{{params.bgColor}}">
-    {{params.txtValue}}
-  </button>
-</view>

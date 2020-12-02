@@ -1,6 +1,0 @@
-{
-  "usingComponents": {
-    "card": "/components/card/card"
-  },
-  "navigationBarTitleText": "Home"
-}

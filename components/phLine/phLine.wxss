@@ -1,5 +1,0 @@
-/* components/phLine/phLine.wxss */
-
-.phline-body {
-  width: 100%;
-}

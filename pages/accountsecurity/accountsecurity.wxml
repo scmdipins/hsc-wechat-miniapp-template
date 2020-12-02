@@ -1,8 +1,0 @@
-<!--pages/accountsecurity.wxml-->
-<block wx:for="{{ cardLines }}" wx:for-item="item" wx:key="index">
-  <cardLine itemName="{{ item.itemName }}" itemStatus="{{ item.itemStatus }}" naviPage="{{ item.naviPage }}" sendSms="{{ item.sendSms }}"></cardLine>
-</block>
-<view class="block-line"></view>
-<block wx:for="{{ cardLinesTwo }}" wx:for-item="item" wx:key="index">
-  <cardLine itemName="{{ item.itemName }}" itemStatus="{{ item.itemStatus }}" naviPage="{{ item.naviPage }}"></cardLine>
-</block>

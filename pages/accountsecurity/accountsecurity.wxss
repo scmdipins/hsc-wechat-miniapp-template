@@ -1,5 +1,0 @@
-/* pages/accountsecurity.wxss */
-.block-line {
-    height: 2vh;
-    background-color: #f2f6ff;
-}

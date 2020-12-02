@@ -1,6 +1,0 @@
-{
-  "usingComponents": {
-    "index": "/pages/home/home",
-    "mypage": "/pages/mypage/mypage"
-  }
-}

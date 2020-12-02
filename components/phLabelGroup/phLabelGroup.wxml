@@ -1,8 +1,0 @@
-<!--components/phLabelGroup/phLabelGroup.wxml-->
-<view class="body-v" bindtap="onTap">
-  <block wx:for="{{ params }}" wx:for-item="labelItem" wx:key="index">
-    <phLabelItem data-params="{{labelItem}}"></phLabelItem>
-    <phLine />
-  </block>
-  <slot></slot>
-</view>

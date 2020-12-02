@@ -1,7 +1,0 @@
-{
-  "component": true,
-  "usingComponents": {
-    "phLabelItem" : "/components/phLabelItem/phLabelItem",
-    "phLine" : "/components/phLine/phLine"
-  }
-}
