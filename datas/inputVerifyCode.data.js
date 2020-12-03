@@ -4,9 +4,7 @@ var VerifyCOdeModal = {
   "btnDisableColor2":"#dddedf",
   "btnEnableTextColor2":"#FFFFFF",
   "btnEnableColor2":"#0074bd",  
-  "time":30
-
-
+  "time":60
 }
 
 module.exports = {

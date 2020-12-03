@@ -1,9 +1,11 @@
 {
   "pages": [
     "pages/home/home",
+    "pages/login/login",
+    "pages/healthHome/healthHome",
+    "pages/healthWorkOrder/healthWorkOrder",
     "pages/accountsecurity/accountsecurity",
     "pages/inputVerifyCode/inputVerifyCode",
-    "pages/login/login",
     "pages/accountsecurity/logoff/logoff",
     "pages/accountsecurity/mail/mail",
     "pages/accountsecurity/phone/phone",

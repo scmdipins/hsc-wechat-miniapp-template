@@ -36,18 +36,6 @@ Component({
       
     },
 
-    // getPhoneNumber: function (e) {
-    //   if (e.detail.errMsg == 'getPhoneNumber:ok') {
-    //    wx.switchTab({
-    //      url: this.data.dataModal.agreeWechatLoginPath,
-    //    })
-    //   } else {
-    //     console.log(e.detail.errMsg);
-    //   }
-    //   wx.switchTab({
-    //     url: this.data.dataModal.refusedWechatLoginPath
-    //   });
-    // },
     getPhoneNumber(e) {
       if(e.detail.iv && e.detail.encryptedData){
         var phoneInfo= {
@@ -64,9 +52,6 @@ Component({
             globalData.phone = res.data.phone;
             globalData.name = res.data.name;
             globalData.isLogin = true;
-            // wx.switchTab({
-            //   url: '../../pages/home/home',
-            // })
             wx.switchTab({
               url: '/pages/mypage/mypage',
               success: function (e) {

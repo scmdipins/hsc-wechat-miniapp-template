@@ -1,0 +1,58 @@
+
+.tabs{
+  width: 750rpx;
+  height: 1333rpx;
+  background-color: #f5f5f5;
+}
+
+.tabs-title{
+  width: 750rpx;
+  height: 90rpx;
+  display: flex; /*伸缩盒子*/
+  justify-content: center;
+  padding: 0;
+  background-color: #ffff;
+}   
+
+.cross-line{
+  height: 4rpx;
+  width: auto;
+}
+
+.title-item{
+  /* width: 187.5rpx; */
+  width: 100%;
+  display: flex;
+  line-height: 86rpx;
+  min-width: 20%;
+  overflow: hidden;
+  position: relative;
+  vertical-align:middle;
+  justify-content: center; 
+  align-items: center;
+}
+
+/* 激活选中效果 */
+.active{
+  color:#1c5385;
+  border-bottom: 5rpx solid currentColor;
+}
+
+
+.slide-tabs{
+  white-space: nowrap;
+  background-color: white;
+}
+
+
+.title-scroll-item{
+  /* width: 187.5rpx; */
+  width: 25%;
+  line-height: 86rpx;
+  min-width: 20%;
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  vertical-align:middle;
+  text-align: center;
+}

@@ -1,0 +1,30 @@
+<view class="tabs" wx:if="{{tabs.length<=4}}">
+
+	<view class="tabs-title" style="color:{{healthTabsModal.noActiveColor}};">
+		<view wx:for="{{tabs}}" wx:key="id"  class="title-item {{item.isActive? 'active':''}}" bindtap="hanldeItemTap" data-index="{{index}}">{{item.name}}
+		</view>
+	</view>
+
+	<view class="tabs-content">
+		<!-- 
+    占位标签
+   -->
+		<slot></slot>
+	</view>
+</view>
+
+<view class="tabs" wx:if="{{tabs.length>4}}" style="color:{{healthTabsModal.noActiveColor}};">
+	<view class="tabs-title">
+		<scroll-view scroll-x="true" scroll-with-animation="true" scroll-into-view="{{item}}" class="slide-tabs">
+			<view wx:for="{{tabs}}" wx:key="id" class="title-scroll-item {{item.isActive? 'active':''}}" bindtap="hanldeItemTap" data-index="{{index}}">{{item.name}}
+			</view>
+		</scroll-view>
+	</view>
+
+	<view class="tabs-content">
+		<!-- 
+    占位标签
+   -->
+		<slot></slot>
+	</view>
+</view>

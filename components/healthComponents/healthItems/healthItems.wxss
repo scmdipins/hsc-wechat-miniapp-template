@@ -1,0 +1,74 @@
+.corss-line{
+  height: 4rpx;
+}
+
+.items-pages {
+  display: flex;
+  align-items: center;
+  width: 750rpx;
+  height: 180rpx;
+  background-color: #ffffff;
+}
+
+
+.items-content{
+  height: 130rpx;
+  width: 600rpx;
+  margin-left: 32rpx;
+}
+
+.items-icon {
+  height: 48rpx;
+  width: 48rpx;
+  padding: 5px 8px 6px;
+}
+
+.items-icon-body {
+  height: 48rpx;
+  width: 48rpx;
+}
+
+.items-name{
+  width: 600rpx;
+  height: 44rpx;
+  margin: 0 32rpx 6rpx;
+  font-family: PingFangSC;
+  font-size: 32rpx;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.38;
+  letter-spacing: normal;
+  color: #212121;
+}
+
+.items-description{
+  width: 600rpx;
+  height: 40rpx;
+  margin: 6rpx 32rpx 0;
+  opacity: 0.8;
+  font-family: CentraleSans;
+  font-size: 28rpx;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.43;
+  letter-spacing: normal;
+  color: #212121;
+}
+
+.items-description2{
+  width: 600rpx;
+  height: 40px;
+  margin: 12rpx 32rpx 16rpx;
+  opacity: 0.63;
+  font-family: CentraleSans;
+  font-size: 28rpx;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.43;
+  letter-spacing: normal;
+  color: #212121;
+}
+
