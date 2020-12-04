@@ -1,13 +1,12 @@
 var healthItemsModal = {
-
   itemList:[
    {
-    "itemsName":"上海市宝山区吴淞医院waiting",
+    "itemsName":"上海市宝山区吴淞医院pending",
     "itemsDscription":"GS20 patient monitor",
     "itemsDscription2":"52549942/20",
     "itemsIcon":"/images/right-black.png",
 
-    "status":"waiting",
+    "status":"pending",
 
   
     "prefixName1":"客户名称:",
@@ -37,18 +36,16 @@ var healthItemsModal = {
   
     "refusedBtnText":"拒绝",
     "refusedTextColor":"#1a3670",
-
-   
    },
 
 
    {
-    "itemsName":"上海市宝山区吴淞医院waiting2",
+    "itemsName":"上海市宝山区吴淞医院pending2",
     "itemsDscription":"GS20 patient monitor",
     "itemsDscription2":"52549942/20",
     "itemsIcon":"/images/right-black.png",
   
-    "status":"waiting",
+    "status":"pending",
 
     "prefixName1":"客户名称2:",
   
@@ -81,12 +78,12 @@ var healthItemsModal = {
 
 
    {
-    "itemsName":"上海市宝山区吴淞医院waiting3",
+    "itemsName":"上海市宝山区吴淞医院pending3",
     "itemsDscription":"GS20 patient monitor",
     "itemsDscription2":"52549942/20",
     "itemsIcon":"/images/right-black.png",
   
-    "status":"waiting",
+    "status":"pending",
 
     "prefixName1":"客户名称3:",
   
@@ -122,5 +119,5 @@ var healthItemsModal = {
 }
 
 module.exports = {
-  healthItemsData: healthItemsModal
+  healthItemsPendingData: healthItemsModal
 }

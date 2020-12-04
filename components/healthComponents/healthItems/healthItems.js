@@ -5,7 +5,23 @@ Component({
    * 组件的属性列表
    */
   properties: {
-    healthItemsModal:Object
+    healthItemsModal: Object,
+    healthItemsPendingModal: Object,
+    healthItemsDoneModal: Object,
+    itemList: {
+      type: Array,
+      value: []
+    },
+    itemListPending:{
+      type:Array,
+      value:[]
+    },
+    itemListDone:{
+      type:Array,
+      value:[]
+    },
+
+
   },
 
   /**
@@ -19,16 +35,13 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    
-    
-    viewWorkOrder:function(){
-      wx.navigateTo({
-        url: '/pages/healthWorkOrder/healthWorkOrder',
-      })
-
-
+    viewInfo: function (e) {
+      this.triggerEvent("clickItem", {
+        index: e.currentTarget.dataset.index,
+        obj:  e.currentTarget.dataset.obj
+      });
     }
+  },
 
-
-  }
 })
+

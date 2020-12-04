@@ -39,7 +39,11 @@ var healthTabsModal = {
     //   "name": "已结单5",
     //   "isActive": false,
     // },
-  ]
+
+  ],
+
+
+
 }
 
 module.exports = {

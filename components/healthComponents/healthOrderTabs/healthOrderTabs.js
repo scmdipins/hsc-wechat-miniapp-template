@@ -1,11 +1,10 @@
-// components/healthComponents/healthOrder/healthOrder.js
-const healthItemsData = require("../../../datas/healthItems.data")
+// components/healthComponents/healthOrderTabs/healthOrderTabs.js
 Component({
   /**
    * 组件的属性列表
    */
   properties: {
-    healthOrderModal:Object
+    orderTabsModal:Object
   },
 
   /**
