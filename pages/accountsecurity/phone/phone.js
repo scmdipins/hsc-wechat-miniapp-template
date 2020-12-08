@@ -1,5 +1,6 @@
 // pages/accountsecurity/phone/phone.js
 const smsService = require('../../../services/smsService.js');
+const configData = require('../../../datas/phone.data.js');
 const hsc = getApp().hsc
 
 Page({
@@ -9,6 +10,8 @@ Page({
    */
   data: {
     phoneNum:null,
+    oldPhone:null,
+    buttonColor: configData.data.inValidButton,
     isvalid: false
   },
 
@@ -16,7 +19,7 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-
+    this.setData({oldPhone: getApp().globalData.phone});
   },
 
   /**
@@ -71,15 +74,24 @@ Page({
   inputData: function(e) {
     const value = e.detail.value;
     if(/^1[3|4|5|7|8|9]\d{9}$/.test(value)){
-      this.setData({phoneNum: value, isvalid: true});
+      this.setData({phoneNum: value, isvalid: true, buttonColor: configData.data.validButton});
     } else{
-      this.setData({phoneNum: value, isvalid: false});
+      this.setData({phoneNum: value, isvalid: false, buttonColor: configData.data.inValidButton});
     }
   },
 
   getVerificationCode: function(e) {
-   
+    if(!this.data.isvalid){
+      return;
+    }
     const phone = this.data.phoneNum;
+    if(phone == getApp().globalData.phone){
+      wx.showModal({
+        title: '提示',
+        content: '你输入的手机号已经是本系统用户，请输入其他手机号。'
+      })
+      return;
+    }
     const data = {
       'phone': phone
     }

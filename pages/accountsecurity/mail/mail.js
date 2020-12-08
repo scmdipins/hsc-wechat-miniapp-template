@@ -1,13 +1,16 @@
 // pages/accountsecurity/mail/mail.js
 const hsc = getApp().hsc
+const configData = require('../../../datas/mail.data.js');
 Page({
 
   /**
    * Page initial data
    */
   data: {
-    address:'11111111@qq.com',
-    isvalid:true
+    address:null,
+    isvalid:true,
+    saveButton: configData.data.saveButton,
+    skipButton: configData.data.skipButton
   },
 
   /**
@@ -21,7 +24,7 @@ Page({
    * Lifecycle function--Called when page is initially rendered
    */
   onReady: function () {
-
+    this.setData({address: getApp().globalData.email});
   },
 
   /**

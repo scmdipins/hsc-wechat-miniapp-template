@@ -8,12 +8,12 @@
   <view class="mail-input">
     <input class="mail-input-opr" value="{{ address }}" bindinput="inputData"></input>
   </view>
-  <view class="warn-block"><text class="warn-message">{{ isvalid ? '' : '邮箱地址格式非法。'}}</text></view>
+  <view class="warn-block"><text class="warn-message">{{ isvalid ? '' : '请输入正确的邮箱地址'}}</text></view>
 
-  <view class="mail-btn-summit">
-    <button class="mail-btn btn-summit" bindtap="saveTap">Save and done</button>
+  <view class="mail-btn-summit" style="background:{{ saveButton }};">
+    <button class="mail-btn btn-summit" bindtap="saveTap">确认</button>
   </view>
-  <view class="mail-btn-skip">
-    <button class="mail-btn btn-skip" bindtap="skipTap">Skip</button>
+  <view class="mail-btn-skip" style="background:{{ skipButton }};">
+    <button class="mail-btn btn-skip" bindtap="skipTap">跳过</button>
   </view>
 </view>

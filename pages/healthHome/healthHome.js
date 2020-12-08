@@ -1,6 +1,9 @@
 // pages/healthHome/healthHome.js
 var healthTabsData = require("../../datas/healthTabs.data")
 var healthItemsData = require("../../datas/healthItems.data")
+var healthItemsPendingData = require("../../datas/healthItemsPending.data")
+var healthItemsDoneData = require("../../datas/healthItemsDone.data")
+
 Page({
 
   /**
@@ -8,8 +11,13 @@ Page({
    */
   data: {
     healthTabsModal:null,
-    healthItemsModal:null,
     tabs:[],
+    healthItemsModal:null,
+    healthItemsPendingModal:null,
+    healthItemsDoneModal:null,
+    itemList:[],
+    itemListPending:[],
+    itemListDone:[],
   },
 
   /**
@@ -18,9 +26,44 @@ Page({
   onLoad: function (options) {
     this.setData({
       healthTabsModal:healthTabsData.healthTabsData,
+      tabs:healthTabsData.healthTabsData.tabs,
       healthItemsModal:healthItemsData.healthItemsData,
-      tabs:healthTabsData.healthTabsData.tabs
+      healthItemsPendingModal:healthItemsPendingData.healthItemsPendingData,
+      healthItemsDoneModal:healthItemsDoneData.healthItemsDoneData,
+      itemList:healthItemsData.healthItemsData.itemList,
+      itemListPending:healthItemsPendingData.healthItemsPendingData.itemList,
+      itemListDone:healthItemsDoneData.healthItemsDoneData.itemList,
     })
+    if (options.index) {
+      this.setData({
+        index:options.index
+      })
+      if (options.order) {
+        var order = JSON.parse(decodeURIComponent(options.order))
+        this.data.healthItemsModal.itemList.splice(this.data.index, 1)
+        if ('pending' == order.status) {
+         this.data.healthItemsPendingModal.itemList.push(order)
+         // tabs
+         let {tabs} =  this.data;
+        tabs.forEach((v,i)=> i===1?v.isActive=true:v.isActive=false);
+        this.setData({
+          tabs:tabs
+        });
+         this.setData({
+           itemList: this.data.healthItemsModal.itemList,
+           itemListPending:this.data.healthItemsPendingModal.itemList
+         })
+         
+        } else {
+          this.setData({
+            itemList: this.data.healthItemsModal.itemList
+          })
+        }
+
+      }
+    }
+    
+
     console.log("---tabs:",this.data.tabs);
   },
 
@@ -78,20 +121,25 @@ Page({
     
     // 接收传递过来的参数
     const {index} = e.detail;
-    console.log(e)
-
-     // 3 获取原数组,以下写法等价于 let tabs = this.data.tabs;
-      // 最好的方法 let tabs = JSON.stringify(this.data.tabs);深拷贝
-      
       let {tabs} =  this.data;
-       //4 数组循环
-        //  1 给每一个循环项 选中属性 改为false 
-       //   2 就给当前索引的项 添加激活选中效果就可以了
-      //4 数组循环 forEach 遍历数组时, 修改了 v 会导致源数组被修改
+       //数组循环
+        //   给每一个循环项 选中属性 改为false 
+       //    就给当前索引的项 添加激活选中效果就可以了
+      // 数组循环 forEach 遍历数组时, 修改了 v 会导致源数组被修改
       tabs.forEach((v,i)=> i===index?v.isActive=true:v.isActive=false);
       this.setData({
         tabs:tabs
       });
+
+  },
+
+  viewWorkOrder:function(e){
+    // debugger
+      var index = e.detail.index
+      var order = e.detail.obj
+    wx.navigateTo({
+      url: '/pages/healthWorkOrder/healthWorkOrder?index='+index+'&order='+encodeURIComponent(JSON.stringify(order))
+    })
   }
 
 })

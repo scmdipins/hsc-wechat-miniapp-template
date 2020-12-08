@@ -7,15 +7,27 @@ Page({
    */
   data: {
     healthOrderModal: null,
+    index:null
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+
     this.setData({
-      healthOrderModal: healthItemsData.healthItemsData,
+      index:options.index
     })
+    if (options.order) {
+      var order = JSON.parse(decodeURIComponent(options.order))
+      this.setData({
+        healthOrderModal: order
+      })
+    }
+    
+    console.log(this.data.healthOrderModal)
+    // debugger
+    // console.log("itemIndex:",index)
   },
 
   /**
@@ -64,6 +76,29 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
+
+  },
+
+
+  accpetGoing: function () {
+    var order =  this.data.healthOrderModal
+    order.status = 'pending'
+    var index = this.data.index
+
+    wx.navigateTo({
+      url: '/pages/healthHome/healthHome?index=' + index + '&order=' + encodeURIComponent(JSON.stringify(order))
+    })
+
+  },
+
+  reject: function () {
+    var order =  this.data.healthOrderModal
+    order.status = null
+    var index = this.data.index
+
+    wx.navigateTo({
+      url: '/pages/healthHome/healthHome?index=' + index + '&order=' + encodeURIComponent(JSON.stringify(order))
+    })
 
   }
 })

@@ -1,36 +1,14 @@
 // pages/accountsecurity.js
 const globalData = getApp().globalData
+const initData = require('../../datas/accountsecurity.data.js')
 Page({
 
   /**
    * Page initial data
    */
   data: {
-    cardLines:[
-      {
-        "itemName":"手机号码",
-        "itemStatus": globalData.phone ? globalData.phone : "未设置",
-        "naviPage": "/pages/accountsecurity/phone/phone"
-      },
-      {
-        "itemName":"修改登录密码",
-        "itemStatus":"未设置",
-        "naviPage": "/pages/inputVerifyCode/inputVerifyCode?navigePage=/pages/accountsecurity/password/password",
-        "sendSms": true
-      },
-      {
-        "itemName":"修改邮箱",
-        "itemStatus": globalData.email ? globalData.email: "未设置",
-        "naviPage": "/pages/inputVerifyCode/inputVerifyCode?navigePage=/pages/accountsecurity/mail/mail",
-        "sendSms": true
-      }
-    ],
-    cardLinesTwo:[
-      {
-        "itemName":"注销账号",
-        "naviPage": "/pages/accountsecurity/logoff/logoff"
-      }
-    ]
+    cardLines: initData.cardLines,
+    cardLinesTwo: initData.cardLineSecs
   },
 
   /**

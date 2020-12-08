@@ -1,8 +1,9 @@
 {
   "pages": [
     "pages/home/home",
-    "pages/login/login",
     "pages/healthHome/healthHome",
+    "pages/healthOrderDetailFirst/healthOrderDetailFirst",
+    "pages/login/login",
     "pages/healthWorkOrder/healthWorkOrder",
     "pages/accountsecurity/accountsecurity",
     "pages/inputVerifyCode/inputVerifyCode",
@@ -19,6 +20,7 @@
     "pages/privacypolicypage/privacypolicypage",
     "pages/useragreementpage/useragreementpage",
     "pages/datacollectionpage/datacollectionpage"
+    
   ],
   "tabBar": {
     "custom": true,

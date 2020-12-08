@@ -84,7 +84,7 @@
   height: 80rpx;
   line-height: 80rpx !important;
   border-radius: 4rpx;
-  background-color: #dddedf;
+  /* background-color: #dddedf; */
 
   padding: unset;
   transform: rotate(-360deg);

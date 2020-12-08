@@ -1,14 +1,16 @@
-<view class="corss-line"></view>
-<view class="items-pages" bindtap="viewWorkOrder">
-	<view class="items-content">
-		<view class="items-name">{{healthItemsModal.itemsName}}</view>
-		<view class="items-description">{{healthItemsModal.itemsDscription}}</view>
-    <view class="items-description2">{{healthItemsModal.itemsDscription2}}</view>
+<view class="itemList" wx:for="{{itemList}}" bindtap="viewInfo" data-index="{{index}}" data-obj="{{item}}">
+	<view class="checkOrder" >
+		<view class="corss-line"></view>
+		<view class="items-pages">
+			<view class="items-content">
+				<view class="items-name">{{item.itemsName}}</view>
+				<view class="items-description">{{item.itemsDscription}}</view>
+				<view class="items-description2">{{item.itemsDscription2}}</view>
+			</view>
+
+			<view class="items-icon">
+				<image class="items-icon-body" src="{{item.itemsIcon}}"></image>
+			</view>
+		</view>
 	</view>
-
-  <view class="items-icon">
-	<image class="items-icon-body" src="{{healthItemsModal.itemsIcon}}" ></image>
-	</view>
-
-
 </view>

@@ -1,5 +1,6 @@
 // pages/accountsecurity/password/password.js
 const hsc = getApp().hsc
+const configData = require('../../../datas/password.data.js');
 Page({
 
   /**
@@ -8,6 +9,7 @@ Page({
   data: {
     password:null,
     repassword:null,
+    saveButton: configData.data.inValidButton,
     isvalid: true,
     isComplete: false
   },
@@ -73,8 +75,10 @@ Page({
     const _this = this;
     const value = e.detail.value;
     _this.validateData(value);
-    if(_this.data.isvalid){
-      _this.setData({ password:value});
+    if(_this.data.isvalid && value == _this.data.repassword){
+      _this.setData({ password:value, isComplete: true, saveButton: configData.data.validButton});
+    }else{
+      _this.setData({ password:value, isComplete: false, saveButton: configData.data.inValidButton});
     }
   },
 
@@ -95,11 +99,16 @@ Page({
     const value = e.detail.value;
     _this.validateData(value);
     if(_this.data.isvalid && value == _this.data.password){
-      _this.setData({ repassword:value, isComplete: true});
+      _this.setData({ repassword:value, isComplete: true, saveButton: configData.data.validButton});
+    }else{
+      _this.setData({ repassword:value, isComplete: false, saveButton: configData.data.inValidButton});
     }
   },
 
   summitPassword: function() {
+    if(!this.data.isComplete){
+      return;
+    }
     const params = {
       password: this.data.password
     }
