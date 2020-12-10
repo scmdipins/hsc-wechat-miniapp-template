@@ -25,17 +25,14 @@
           <view><text class="right-desc">{{ item }}</text></view>
         </view>
       </block>
-      <!-- <view>	1. 	该账户应当是您本人注册的飞利浦之家账户，且该账户处于正常状态。</view>
-      <view>2. 	该账户处于正常状态，无未完成的交易、未处理完毕的投诉纠纷或售后服务请求，无未结清的退回资金或拖欠款项。</view> -->
     </view>
   </view>
   <view class="off-rule">
-    <!-- <text>注销前，请充份阅读并理解《飞利浦之家用户协议》和《飞利浦之家隐私政策》中相关条款并符合其中规定的所有其他注销条件和条款。</text> -->
       <block wx:for="{{ comment }}" wx:for-item="item" wx:key="index">
           <text style="color:{{ item.color ? item.color: 'unset'}};text-decoration: {{ item.color ? 'underline': 'unset'}};">{{ item.text }}</text>
       </block>
   </view>
   <view class="off-btn-block">
-    <button class="summit-btn" bindtap="logOff">注销账号</button>
+    <button class="summit-btn" style="background:{{ buttonColor }};" bindtap="logOff">注销账号</button>
   </view>
 </view>
