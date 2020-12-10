@@ -122,7 +122,12 @@ Component({
             var imageUrl = res['imageUrl'];
             that.saveImageToDB(imageUrl);
           }).catch(res => {
-            console.log('Fail uploadImageToOSSCredential = ' + res);
+            wx.showToast({
+              title: '[失败] ' + res,
+              icon: 'none',
+              duration: 3000,
+              mask:true
+            });            
           })
         }
       })   
@@ -152,10 +157,6 @@ Component({
     onTap : function () {
       console.log('[phAccountPage] onTap, this.data.params = ', this.data.params);
     },
-
-    onUserNameFocus : function (e) {
-      console.log('[phAccountPage] onUserNameFocus, e = ', e);
-    },   
 
     onUserNameBlur : function (e) {
       // console.log('[phAccountPage] onUserNameBlur, e = ', e);

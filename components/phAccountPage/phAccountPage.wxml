@@ -4,7 +4,7 @@
 </phLabelItem>
 <phLine data-params='{"heightValue":"1px","colorValue":"#dddddd"}' />
 <phLabelItem data-params="{{params.userName}}">
-  <input class="phaccountpage-input" maxlength="{{params.userName.maxLength}}" value="{{params.userName.inputValue}}" bindfocus="onUserNameFocus" bindblur="onUserNameBlur" />
+  <input class="phaccountpage-input" maxlength="{{params.userName.maxLength}}" value="{{params.userName.inputValue}}" bindblur="onUserNameBlur" />
 </phLabelItem>
 
 <phLine data-params='{"heightValue":"13px","colorValue":"#f2f6ff"}' />

@@ -18,8 +18,8 @@ class SignDatas {
     // console.log('urlPath', urlPath);
     // console.log('requestData', requestData);
 
-    var dateObject = Date;
-    this.date = dateObject.toLocaleString();
+    var dateObj = new Date();
+    this.date = dateObj.toGMTString(); // .toLocaleString();
 
     this.nonce = this.createUuid();
     this.textToSign += 'GET\n';
