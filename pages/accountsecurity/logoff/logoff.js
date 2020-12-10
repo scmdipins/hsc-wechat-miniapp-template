@@ -7,6 +7,7 @@ Page({
    * Page initial data
    */
   data: {
+    buttonColor: logData.data.saveButtonColor,
     rights: logData.data.rights,
     conditions: logData.data.conditions,
     comment: logData.data.comment

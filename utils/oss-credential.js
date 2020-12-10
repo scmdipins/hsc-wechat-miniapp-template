@@ -27,8 +27,8 @@ function getRealImageUrlFromOSS(imageUrl) {
         'X-Ca-Signature': signDatas.signature,
         'X-Ca-SignatureMethod': signDatas.signatureMethod,
         'X-Ca-Signature-Headers': signDatas.signatureHeaders,
-        'Content-Type': signDatas.contentType,
-        'Accept': signDatas.accept
+        'Content-Type': 'application/json', //signDatas.contentType,
+        'Accept': '*' // signDatas.accept
       },
       success(res) {
         var content = res.data['content'];
@@ -36,11 +36,11 @@ function getRealImageUrlFromOSS(imageUrl) {
           var realImageUrl = content['url'];
           resolve(realImageUrl);
         } else {
-          reject(res);
+          reject('OSS返回内容中content不存在！' + res);
         }
       },
       fail(res) {
-        reject(res);
+        reject('OSS认证失败！');
       }
     })
   })
@@ -62,7 +62,9 @@ function uploadImageFileToOSS(imageFile) {
       'action':'put'
     };
     var signDatas = new SignDatas(urlPath, requestData);
+    // console.log('signDatas = ', signDatas);
     var apiUrl = urlHost + urlPath;
+    // console.log('apiUrl = ', apiUrl);
     wx.request({
       url: apiUrl,
       method:'GET',
@@ -79,6 +81,7 @@ function uploadImageFileToOSS(imageFile) {
         'Accept': signDatas.accept
       },
       success(res) {
+        // console.log('res = ', res);
         var content = res.data['content'];
         if (content) {
           var url = content['url'];
@@ -105,20 +108,20 @@ function uploadImageFileToOSS(imageFile) {
                   resolve(ret);
                 },
                 fail: (res) => {
-                  reject(res);
+                  reject('提交字节流失败！');
                 }
               })
             },
             fail(res) {
-              reject(res);
+              reject('读取本地文件失败！');
             }
           })          
         } else {
-          reject(res);
+          reject('OSS没有返回content！' + res.data);
         }
       },
       fail(res) {
-        reject(res);
+        reject('OSS认证失败！');
       }
     })
   })
