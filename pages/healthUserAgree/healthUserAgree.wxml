@@ -1,0 +1,44 @@
+<view class="page-content">
+	<view class="register-content">
+		<orderTabs-modal id="orderTabsModal" userAgreeModal="{{userAgreeModal}}" orderTabsModal="{{orderTabsModal}}"></orderTabs-modal>
+	</view>
+
+
+	<view class="user-agree">
+
+		<view class="text">客户满意度</view>
+		<view class="slider-body">
+			<view class="slider-box">
+				<slider class="slider" bindchange="changeValue" value="{{changeValue}}" show-value="true" min="0" max="100" step="10" activeColor="#1474a4" backgroundColor="#ADCFE0" block-size="16"></slider>
+			</view>
+			<view class="level">
+				<view class="min">非常不满意</view>
+				<view class="max">非常满意</view>
+			</view>
+		</view>
+
+		<view class="agree">
+			<view class="agree-description">
+				<view class="input-body">
+					<view class="border">
+						<textarea class="agree-input" bindinput="checkAgree" placeholder="客户意见" placeholder-style="color:#8c8c8c;"></textarea>
+					</view>
+				</view>
+			</view>
+		</view>
+
+		<!-- <view class="signature">
+			<view class="signature-text">客户签字:</view>
+			<input bindinput="checkSignature" class="signature-value"></input>
+		</view> -->
+
+	</view>
+
+	<view class="next-body" bindtap="jumpDonePage" wx:if="{{inputAgreeValue}}">
+		<view class="next" style="background-color:{{userAgreeModal.btnColor}};color:{{userAgreeModal.btnTextColor}}">{{userAgreeModal.nextText}}</view>
+	</view>
+	<view class="next-body" wx:if="{{!inputAgreeValue}}">
+		<view class="next" style="background-color:{{userAgreeModal.btnDisableColor}};color:{{userAgreeModal.btnTextColor}}">{{userAgreeModal.nextDisableText}}</view>
+	</view>
+
+</view>

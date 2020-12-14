@@ -1,38 +1,33 @@
-
 <view class="page-content">
 
-<healthTabs-modal healthTabsModal="{{healthTabsModal}}" tabs="{{tabs}}" binditemChange="handItemChange">
-  <block wx:if="{{tabs[0].isActive}}">
-  <healthItems-modal healthItemsModal="{{healthItemsModal}}" itemList="{{itemList}}" bind:clickItem="viewWorkOrder">
-  </healthItems-modal>
-  </block>
+	<healthTabs-modal healthTabsModal="{{healthTabsModal}}" tabs="{{tabs}}" binditemChange="handItemChange">
+		<block wx:if="{{tabs[0].isActive}}">
+			<healthItems-modal healthItemsModal="{{healthItemsModal}}" itemList="{{itemList}}" bind:clickItem="viewWorkOrder">
+			</healthItems-modal>
+		</block>
 
 
-  <block wx:elif="{{tabs[1].isActive}}">
-   <healthItems-modal healthItemsModal="{{healthItemsPendingModal}}" itemList="{{itemListPending}}" >
-  </healthItems-modal>
-  </block>
+		<block wx:elif="{{tabs[1].isActive}}">
+			<healthItems-modal healthItemsModal="{{healthItemsPendingModal}}" itemList="{{itemListPending}}" bind:clickPendingItem="doingOrder">
+			</healthItems-modal>
+		</block>
 
-  <block wx:elif="{{tabs[2].isActive}}">
-   <healthItems-modal healthItemsModal="{{healthItemsDoneModal}}" itemList="{{itemListDone}}" >
-  </healthItems-modal>
-  </block>
-</healthTabs-modal>
-
-</view>
+		<block wx:elif="{{tabs[2].isActive}}">
+			<healthItems-modal healthItemsModal="{{healthItemsDoneModal}}" itemList="{{itemListDone}}" bindtap="finishOrder">
+			</healthItems-modal>
+		</block>
+	</healthTabs-modal>
 
 
-<view class="bottom-tab">
-
-<view class="fix">
-	<image class="ifx-images" src="/images/fix.png"></image>
-	<view class="fix-text">报修</view>
-</view>
-
-<view class="user">
-	<image class="user-images" src="/images/my@3x.png"></image>
-	<view class="user-text">用户</view>
-</view>
-
-
+	<view class="bottom-tab">
+		<view class="fix">
+			<image class="ifx-images" src="/images/fix.png"></image>
+			<view class="fix-text">报修</view>
+		</view>
+		<view class="user" bindtap="jumpMypages">
+			<image class="user-images" src="/images/my@3x.png"></image>
+			<view class="user-text">用户档案</view>
+		</view>
+	</view>
+	
 </view>

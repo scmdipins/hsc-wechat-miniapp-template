@@ -7,7 +7,7 @@ Page({
    */
   data: {
     healthOrderModal: null,
-    index:null
+    index: null
   },
 
   /**
@@ -16,7 +16,7 @@ Page({
   onLoad: function (options) {
 
     this.setData({
-      index:options.index
+      index: options.index
     })
     if (options.order) {
       var order = JSON.parse(decodeURIComponent(options.order))
@@ -24,7 +24,7 @@ Page({
         healthOrderModal: order
       })
     }
-    
+
     console.log(this.data.healthOrderModal)
     // debugger
     // console.log("itemIndex:",index)
@@ -81,23 +81,25 @@ Page({
 
 
   accpetGoing: function () {
-    var order =  this.data.healthOrderModal
+    var order = this.data.healthOrderModal
     order.status = 'pending'
     var index = this.data.index
+    var behavior = "waitingOrder"
 
-    wx.navigateTo({
-      url: '/pages/healthHome/healthHome?index=' + index + '&order=' + encodeURIComponent(JSON.stringify(order))
+    // debugger
+    wx.redirectTo({
+      url: '/pages/healthHome/healthHome?index=' + index + '&behavior=' + behavior + '&order=' + encodeURIComponent(JSON.stringify(order)),
     })
-
   },
 
   reject: function () {
-    var order =  this.data.healthOrderModal
+    var order = this.data.healthOrderModal
     order.status = null
     var index = this.data.index
+    var behavior = "waitingOrder"
 
-    wx.navigateTo({
-      url: '/pages/healthHome/healthHome?index=' + index + '&order=' + encodeURIComponent(JSON.stringify(order))
+    wx.redirectTo({
+      url: '/pages/healthHome/healthHome?index=' + index + '&behavior=' + behavior + '&order=' + encodeURIComponent(JSON.stringify(order))
     })
 
   }

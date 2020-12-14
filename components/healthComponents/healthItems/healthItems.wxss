@@ -12,9 +12,13 @@
 
 
 .items-content{
-  height: 130rpx;
+  height: 180rpx;
   width: 600rpx;
   margin-left: 32rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .items-icon {
@@ -31,7 +35,7 @@
 .items-name{
   width: 600rpx;
   height: 44rpx;
-  margin: 0 32rpx 6rpx;
+  margin: 0 0 6rpx 6rpx;
   font-family: PingFangSC;
   font-size: 32rpx;
   font-weight: 300;
@@ -45,7 +49,7 @@
 .items-description{
   width: 600rpx;
   height: 40rpx;
-  margin: 6rpx 32rpx 0;
+  margin: 0 0 6rpx 6rpx;
   opacity: 0.8;
   font-family: CentraleSans;
   font-size: 28rpx;
@@ -59,8 +63,8 @@
 
 .items-description2{
   width: 600rpx;
-  height: 40px;
-  margin: 12rpx 32rpx 16rpx;
+  height: 40rpx;
+  margin: 0 0 6rpx 6rpx;
   opacity: 0.63;
   font-family: CentraleSans;
   font-size: 28rpx;
@@ -72,3 +76,18 @@
   color: #212121;
 }
 
+
+.finish-time{
+width: 600rpx;
+  height: 40rpx;
+  margin: 0 0 6rpx 6rpx;
+  opacity: 0.63;
+  font-family: CentraleSans;
+  font-size: 28rpx;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.43;
+  letter-spacing: normal;
+  color: #97b326;
+} 

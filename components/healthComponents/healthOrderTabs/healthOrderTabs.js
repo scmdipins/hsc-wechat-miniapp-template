@@ -4,7 +4,12 @@ Component({
    * 组件的属性列表
    */
   properties: {
-    orderTabsModal:Object
+    orderTabsModal:Object,
+    orderServiceModal:Object,
+    orderTimeModal:Object,
+    serviceResultModal:Object,
+    userAgreeModal:Object
+    
   },
 
   /**

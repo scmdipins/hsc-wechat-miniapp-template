@@ -1,1 +1,104 @@
-/* components/healthComponents/healthOrderTabs/healthOrderTabs.wxss */
+.tabs-pages {
+  width: 750rpx;
+  height: 200rpx;
+  display: flex;
+  justify-content: center;
+}
+
+.step-body {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.step {
+  height: 200rpx;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.step-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: CentraleSans;
+  font-size: 24rpx;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+  width: 48rpx;
+  height: 48rpx;
+  border-radius: 50%;
+  text-align: center;
+  background-color: #909090;
+  position: absolute;
+}
+
+.step-text {
+  width: 100%;
+  height: 40rpx;
+  margin-top: 36rpx;
+  font-family: PingFangSC;
+  font-size: 28rpx;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #909090;
+}
+
+.step-line {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.line{
+  height: 4rpx;
+  width: 100%;
+  background-color: black;
+}
+
+.left{
+  margin-left: 50%;
+  height: 4rpx;
+  width: 100%;
+  background-color:black;
+}
+
+.right{
+  margin-right: 50%;
+  height: 4rpx;
+  width: 100%;
+  background-color: black;
+}
+
+.active{
+  background-color: #1C5385;
+}
+
+.activeText{
+  width: 100%;
+  height: 40rpx;
+  margin-top: 36rpx;
+  font-family: PingFangSC;
+  font-size: 28rpx;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: black;
+}

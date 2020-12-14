@@ -1,0 +1,24 @@
+<view class="page">
+
+	<view class="content1">
+		<view class="title1">{{orderSummaryModal.title1}}</view>
+		<view class="content1-body" wx:for="{{orderSummaryModal.list1}}">
+			<view class="prefixName">{{item.prefixName}}</view>
+			<view class="description">{{item.description}}</view>
+		</view>
+	</view>
+
+	<view class="content2">
+		<view class="title1">{{orderSummaryModal.title2}}</view>
+		<view class="content1-body" wx:for="{{orderSummaryModal.list2}}">
+			<view class="prefixName">{{item.prefixName}}</view>
+			<view class="description">{{item.description}}</view>
+		</view>
+	</view>
+
+
+  <view class="next-body"  bindtap="jumpOrderTime">
+		<view class="next" style="background-color:{{orderSummaryModal.btnColor}};color:{{orderSummaryModal.btnTextColor}}">{{orderSummaryModal.nextText}}</view>
+	</view>
+
+</view>

@@ -1,9 +1,0 @@
-<view class="page-content">
-
-	<view class="register-content">
-		<orderTabs-modal id="orderTabsModal" orderTabsModal="{{orderTabsModal}}"></orderTabs-modal>
-	</view>
-
-
-</view>
-

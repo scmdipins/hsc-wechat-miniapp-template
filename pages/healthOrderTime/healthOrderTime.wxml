@@ -1,0 +1,83 @@
+<view class="page-content">
+	<view class="register-content">
+		<orderTabs-modal id="orderTabsModal" orderTimeModal="{{orderTimeModal}}" orderTabsModal="{{orderTabsModal}}"></orderTabs-modal>
+	</view>
+
+	<!-- 工时描述 -->
+	<view class='list-msg'>
+		<!-- 下拉框 -->
+		<view class='list-msg2' bindtap='bindShowMsg'>
+			<text class="man-hour">{{default1}}</text>
+			<image style='height:20rpx;width:20rpx;' src='/images/down.png'></image>
+		</view>
+		<!-- 下拉需要显示的列表 -->
+		<view class="select_box" wx:if="{{select}}">
+			<view class="list-item" wx:for="{{orderTimeModal.manHour}}">
+				<view class="select_one" bindtap="mySelect" data-name="{{item.value}}">{{item.value}}</view>
+			</view>
+		</view>
+	</view>
+
+	<!-- 服务日期 -->
+	<view class="list-msg">
+		<picker mode="date" class="dateValue" value="{{dateValue}}" start="1999-01-01" end="2999-12-12" bindchange="datePickerBindchange">
+			<view class="default-value">
+				<view class="date-content">
+					{{dateValue}}
+				</view>
+				<view class="image">
+					<image style='height:20rpx;width:20rpx;' src='/images/down.png'></image>
+				</view>
+			</view>
+		</picker>
+	</view>
+
+
+	<view class="chose-time">
+		<view class="list-msg">
+			<picker mode="time" class="dateValue" value="{{startTime}}" start="00:00" end="24:00" bindchange="timePickerBindchange">
+				<view class="default-value">
+					<view class="date-content">
+						{{startTime}}
+					</view>
+					<view class="image">
+						<image style='height:20rpx;width:20rpx;' src='/images/down.png'></image>
+					</view>
+				</view>
+			</picker>
+		</view>
+
+		<view class="list-msg" >
+			<picker disabled="{{checkEndTime}}" mode="time" class="dateValue" value="{{endTime}}" start="{{startTime}}" end="24:00" bindchange="endTimePickerBindchange">
+				<view class="default-value">
+					<view class="date-content">
+						{{endTime}}
+					</view>
+					<view class="image">
+						<image style='height:20rpx;width:20rpx;' src='/images/down.png'></image>
+					</view>
+				</view>
+			</picker>
+		</view>
+
+	
+
+	</view>
+
+
+
+	<view class="work-hour">
+		<view class="work-hour-text">工时:{{workHour}}h{{workMin}}min</view>
+	</view>
+
+
+
+	<view class="next-body" wx:if="{{chooseManHour&&chooseDateService&&chooseStart&&chooseEnd}}">
+		<view class="next" bindtap="jumpServiceResult" style="background-color:{{orderTimeModal.btnColor}};color:{{orderTimeModal.btnTextColor}}">{{orderTimeModal.nextText}}</view>
+	</view>
+	<view class="next-body" wx:if="{{!chooseManHour||!chooseDateService||!chooseStart||!chooseEnd}}">
+		<view class="next" style="background-color:{{orderTimeModal.btnDisableColor}};color:{{orderTimeModal.btnTextColor}}">{{orderTimeModal.nextDisableText}}</view>
+	</view>
+
+
+</view>
