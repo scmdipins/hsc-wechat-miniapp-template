@@ -2,37 +2,35 @@ var orderSummaryModal = {
 
   "title1":"结算信息",
   "title2":"工时信息",
-  "nextText":"查看工单详情",
-  "btnColor":"#1c5385",
-  "btnTextColor":"#ffffff",
-  
+
+
   list1:[
     {
-      "prefixName":"Subject:",
-      "description":"Entry text",
+      "prefixName":"事项:",
+      "description":"输入文本",
     },
     {
-      "prefixName":"Subject:",
-      "description":"Entry text",
+      "prefixName":"事项:",
+      "description":"输入文本",
     },
     {
-      "prefixName":"Subject:",
-      "description":"Entry text",
+      "prefixName":"事项:",
+      "description":"输入文本",
     },
     {
-      "prefixName":"Subject:",
-      "description":"Entry text",
+      "prefixName":"事项:",
+      "description":"输入文本",
+
     }
   ],
-
   list2:[
     {
-      "prefixName":"Subject:",
-      "description":"Entry text",
+      "prefixName":"事项:",
+      "description":"输入文本",
     },
     {
       "prefixName":"工时:",
-      "description":"Entry text",
+      "description":"输入文本",
     }
   ]
 

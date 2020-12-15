@@ -17,8 +17,5 @@
 	</view>
 
 
-  <view class="next-body"  bindtap="jumpOrderTime">
-		<view class="next" style="background-color:{{orderSummaryModal.btnColor}};color:{{orderSummaryModal.btnTextColor}}">{{orderSummaryModal.nextText}}</view>
-	</view>
 
 </view>
