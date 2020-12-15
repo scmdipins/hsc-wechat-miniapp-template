@@ -27,8 +27,8 @@ function getRealImageUrlFromOSS(imageUrl) {
         'X-Ca-Signature': signDatas.signature,
         'X-Ca-SignatureMethod': signDatas.signatureMethod,
         'X-Ca-Signature-Headers': signDatas.signatureHeaders,
-        'Content-Type': 'application/json', //signDatas.contentType,
-        'Accept': '*' // signDatas.accept
+        'Content-Type': signDatas.contentType,
+        'Accept': signDatas.accept
       },
       success(res) {
         var content = res.data['content'];
