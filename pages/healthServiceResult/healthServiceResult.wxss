@@ -17,12 +17,12 @@
 .result {
   display: flex;
   width: 750rpx;
-  height: 120rpx;
+  height: 80rpx;
 }
 
 .reslut-name {
   margin-left: 50rpx;
-  align-items: center;
+  font-size: 32rpx;
 }
 
 .result-image {
@@ -56,11 +56,22 @@
   display: flex;
   align-items: center;
   width: 690rpx;
-  height: 98rpx;
+  height: 50rpx;
   border: solid #f0f0f0;
   border-width: 0 0 2rpx 0;
   margin-left: 48rpx;
 }
+.wrong-2 {
+  display: flex;
+  align-items: center;
+  width: 690rpx;
+  height: 50rpx;
+  border: solid #f0f0f0;
+  border-width: 0 0 2rpx 0;
+  margin-left: 48rpx;
+  margin-top: 20rpx;
+}
+
 
 .reason-text {
   width: 300rpx;
@@ -68,7 +79,7 @@
   transform: rotate(360deg);
   opacity: 0.63;
   font-family: CentraleSans;
-  font-size: 34rpx;
+  font-size: 32rpx;
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;

@@ -38,6 +38,7 @@
   line-height: 1.38;
   letter-spacing: normal;
   color: #212121;
+  margin-left: 30rpx;
 }
 
 .description{

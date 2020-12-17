@@ -35,7 +35,7 @@
 				<input bindinput="checkReason"></input>
 			</view>
 
-			<view class="wrong-1">
+			<view class="wrong-2">
 				<view class="reason-text">新产生工单号：</view>
 				<input type="number" bindinput="checkOrderNumber"></input>
 			</view>
