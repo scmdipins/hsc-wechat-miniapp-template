@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/healthHome/healthHome",
     "pages/home/home",
+    "pages/healthHome/healthHome",
     "pages/mypage/mypage",
     "pages/healthUserAgree/healthUserAgree",
     "pages/healthOrderService/healthOrderService",
