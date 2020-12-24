@@ -23,7 +23,7 @@ Page({
       },
       {
         "itemName":"修改登录密码",
-        "itemStatus":"未设置",
+        "itemStatus": globalData.passwordStatus ? "" : "未设置",
         "naviPage": "/pages/inputVerifyCode/inputVerifyCode?navigePage=/pages/accountsecurity/password/password",
         "sendSms": true
       },

@@ -118,6 +118,7 @@ Page({
       data: params
     }
     hsc.request(obj).then(res => {
+      getApp().globalData.passwordStatus = res.data.passwordStatus;
       if(res.statusCode == 200){
         wx.switchTab({
           url: '/pages/mypage/mypage',
