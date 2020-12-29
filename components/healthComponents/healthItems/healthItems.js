@@ -36,7 +36,12 @@ Component({
    */
   methods: {
     viewInfo: function (e) {
+      // debugger
       this.triggerEvent("clickItem", {
+        index: e.currentTarget.dataset.index,
+        obj:  e.currentTarget.dataset.obj
+      });
+      this.triggerEvent("clickPendingItem", {
         index: e.currentTarget.dataset.index,
         obj:  e.currentTarget.dataset.obj
       });

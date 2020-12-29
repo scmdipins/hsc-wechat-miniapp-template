@@ -2,15 +2,18 @@
 	<view class="checkOrder" >
 		<view class="corss-line"></view>
 		<view class="items-pages">
+
 			<view class="items-content">
 				<view class="items-name">{{item.itemsName}}</view>
 				<view class="items-description">{{item.itemsDscription}}</view>
 				<view class="items-description2">{{item.itemsDscription2}}</view>
+				<view class="finish-time" wx:if="{{item.status=='done'}}" >已结单 2020/10/23</view>
 			</view>
 
 			<view class="items-icon">
 				<image class="items-icon-body" src="{{item.itemsIcon}}"></image>
 			</view>
+			
 		</view>
 	</view>
 </view>

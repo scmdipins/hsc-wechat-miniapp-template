@@ -2,9 +2,14 @@
   "pages": [
     "pages/home/home",
     "pages/healthHome/healthHome",
-    "pages/healthOrderDetailFirst/healthOrderDetailFirst",
-    "pages/login/login",
+    "pages/mypage/mypage",
+    "pages/healthUserAgree/healthUserAgree",
+    "pages/healthOrderService/healthOrderService",
+    "pages/healthOrderTime/healthOrderTime",
+    "pages/healthServiceResult/healthServiceResult",
+    "pages/healthOrderSummary/healthOrderSummary",
     "pages/healthWorkOrder/healthWorkOrder",
+    "pages/login/login",
     "pages/accountsecurity/accountsecurity",
     "pages/inputVerifyCode/inputVerifyCode",
     "pages/accountsecurity/logoff/logoff",
@@ -14,13 +19,12 @@
     "pages/root/root",
     "pages/logs/logs",
     "pages/my404/my404",
-    "pages/mypage/mypage",
+    
     "pages/settingpage/settingpage",
     "pages/accountpage/accountpage",
     "pages/privacypolicypage/privacypolicypage",
     "pages/useragreementpage/useragreementpage",
     "pages/datacollectionpage/datacollectionpage"
-    
   ],
   "tabBar": {
     "custom": true,

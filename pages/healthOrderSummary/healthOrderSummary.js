@@ -1,28 +1,28 @@
-// pages/healthOrderDetailFirst/healthOrderDetailFirst.js
-var orderTabsData = require("../../datas/healthOrderTabs.data")
+// pages/healthOrderSummary/healthOrderSummary.js
+var orderSummaryData = require("../../datas/healthOrderSummary.data")
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    orderTabsModal:null
+    orderSummaryModal: null
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.setData({
+      orderSummaryModal: orderSummaryData.orderSummaryData,
+    })
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    this.setData({
-      orderTabsModal: orderTabsData.orderTabsData,
-    })
+
   },
 
   /**

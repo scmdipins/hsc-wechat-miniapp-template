@@ -17,7 +17,9 @@ var tabBar = {
       "pagePath": "/pages/mypage/mypage",
       "iconPath": "/images/my.png",
       "selectedIconPath": "/images/myblue.png"
-    }   
+    },
+    
+    
   ]
 }
 module.exports = {

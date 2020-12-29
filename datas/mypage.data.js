@@ -19,6 +19,12 @@ var MyPageConsts = {
       "txtValue": "更多",
       "txtColor": null,
       "urlValue": "/pages/my404/my404"
+    },
+    {
+      "imgValue": "/images/workOrder.png",
+      "txtValue": "工单",
+      "txtColor": null,
+      "urlValue": "/pages/healthHome/healthHome"
     }  
   ]
 }

@@ -1,0 +1,61 @@
+<view class="page-content">
+	<view class="register-content">
+		<orderTabs-modal id="orderTabsModal" serviceResultModal="{{serviceResultModal}}" orderTabsModal="{{orderTabsModal}}"></orderTabs-modal>
+	</view>
+
+	<view class="title">
+		服务结果
+	</view>
+
+
+	<view class="results-body">
+
+		<radio-group name="country" class="radio-group" bindchange="radioChange">
+			<label class="radio" wx:for="{{serviceResultModal.items}}" wx:key="{{index}}">
+				<view class="result">
+					<view class="reslut-name">
+						{{item.name}}
+						<view class="line"></view>
+					</view>
+
+					<radio value='{{item.value}}' checked='{{item.checked}}'></radio>
+					<block wx:if="{{yjIndex == item.value}}">
+						<image class="result-image" src="/images/choose@3x.png"></image>
+					</block>
+					<block wx:else>
+						<image class="result-image" src="/images/nochoose@3x.png"></image>
+					</block>
+				</view>
+			</label>
+		</radio-group>
+
+		<view class="reason" wx:if="{{showReason}}">
+			<view class="wrong-1">
+				<view class="reason-text">未正常工作原因：</view>
+				<input bindinput="checkReason"></input>
+			</view>
+
+			<view class="wrong-2">
+				<view class="reason-text">新产生工单号：</view>
+				<input type="number" bindinput="checkOrderNumber"></input>
+			</view>
+		</view>
+
+	</view>
+
+
+	<!-- <view class="signature">
+		<view class="signature-text">客户签字:</view>
+		<input class="signature-value" bindinput="checkSignature"></input>
+	</view> -->
+
+
+	<view class="next-body" bindtap="jumpUserAgree" wx:if="{{checkRadio}}">
+		<view class="next" style="background-color:{{serviceResultModal.btnColor}};color:{{serviceResultModal.btnTextColor}}">{{serviceResultModal.nextText}}</view>
+	</view>
+	<view class="next-body" wx:if="{{!checkRadio}}">
+		<view class="next" style="background-color:{{serviceResultModal.btnDisableColor}};color:{{serviceResultModal.btnTextColor}}">{{serviceResultModal.nextDisableText}}</view>
+	</view>
+
+
+</view>

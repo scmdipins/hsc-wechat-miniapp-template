@@ -25,6 +25,7 @@ Page({
         globalData.name = res.data.name;
         globalData.email = res.data.email;
         globalData.image = res.data.image;
+        globalData.passwordStatus = res.data.passwordStatus;
         globalData.isLogin = true;
       }
     }).catch(res => {

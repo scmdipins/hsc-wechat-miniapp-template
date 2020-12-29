@@ -1,8 +1,40 @@
-<!-- <view>{{orderTabsModal.btnText}}</view> -->
+<view class="tabs-pages" wx:if="{{orderTabsModal.enable}}">
 
-<view class=""tabs-pages>
+	<view class="step-body" wx:for="{{orderTabsModal.tabs}}">
+
+		<view class="step" wx:if="{{orderServiceModal.stepNumber==1}}">
+			<view class="step-line">
+				<view class="line {{index==0? 'left':''}} {{index==orderTabsModal.tabs.length-1? 'right':''}}" style="background-color:{{orderTabsModal.lineColor}};"></view>
+				<view class="step-icon {{index==0? 'active':''}}" style=" color:{{orderTabsModal.textColor}}">{{item.step}}</view>
+			</view>
+			<view class="step-text {{index==0? 'activeText':''}}">{{item.stepName}}</view>
+		</view>
+
+		<view class="step" wx:if="{{orderTimeModal.stepNumber==2}}">
+			<view class="step-line">
+				<view class="line {{index==0? 'left':''}} {{index==orderTabsModal.tabs.length-1? 'right':''}}" style="background-color:{{orderTabsModal.lineColor}};"></view>
+				<view class="step-icon {{index<=1? 'active':''}}" style=" color:{{orderTabsModal.textColor}}">{{item.step}}</view>
+			</view>
+			<view class="step-text {{index<=1? 'activeText':''}}">{{item.stepName}}</view>
+		</view>
+
+		<view class="step" wx:if="{{serviceResultModal.stepNumber==3}}">
+			<view class="step-line">
+				<view class="line {{index==0? 'left':''}} {{index==orderTabsModal.tabs.length-1? 'right':''}}" style="background-color:{{orderTabsModal.lineColor}};"></view>
+				<view class="step-icon {{index<=2? 'active':''}}" style=" color:{{orderTabsModal.textColor}}">{{item.step}}</view>
+			</view>
+			<view class="step-text {{index<=2? 'activeText':''}}">{{item.stepName}}</view>
+		</view>
+
+		<view class="step" wx:if="{{userAgreeModal.stepNumber==4}}">
+			<view class="step-line">
+				<view class="line {{index==0? 'left':''}} {{index==orderTabsModal.tabs.length-1? 'right':''}}" style="background-color:{{orderTabsModal.lineColor}};"></view>
+				<view class="step-icon {{index<=3? 'active':''}}" style=" color:{{orderTabsModal.textColor}}">{{item.step}}</view>
+			</view>
+			<view class="step-text {{index<=3? 'activeText':''}}">{{item.stepName}}</view>
+		</view>
 
 
-
+	</view>
 
 </view>
