@@ -12,7 +12,7 @@ var data = {
 
 }
 
-var baseUrl = 'https://origin.dev.wechat.hsc.philips.com.cn'
+var baseUrl = 'https://api-stg.philips-healthsuitechina.com.cn'
 // var baseUrl = 'https://origin.www.prod.wechat.hsc.philips.com.cn'
 
 /**

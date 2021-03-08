@@ -34,7 +34,7 @@ App({
     userInfo: null,
     passwordStatus: false,
     ossAssetsUrl: 'https://skincubator-miniapp-prod-public.oss-cn-shanghai.aliyuncs.com/assets/',
-    ossHostUrl: 'https://origin.dev.wechat.hsc.philips.com.cn',
+    ossHostUrl: 'https://api-stg.philips-healthsuitechina.com.cn',
     ossPresignedUrl: '/oss/presignedurl/skincubator-miniapp',
   },
   hsc: hsc
